@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zhl_dark"
+    android:orientation="vertical" >
+
+    <!-- Map in background -->
+    <fragment
+        class="com.google.android.gms.maps.MapFragment"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/set_parent_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clickable="true"
+        android:visibility="invisible"
+        android:layout_marginBottom="@dimen/size30"
+        android:elevation="@dimen/shadow_elevation">
+
+        <!-- Time container -->
+        <LinearLayout
+            android:id="@+id/time_container_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height42"
+            android:background="@drawable/zdark_circle_drawable"
+            android:gravity="center"
+            android:paddingRight="@dimen/size5"
+            android:orientation="horizontal">
+
+            <com.application.zapplon.utils.TextViewLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_pickup_location"
+                android:textColor="@color/zhl"
+                android:textSize="@dimen/size14"
+                android:paddingLeft="@dimen/size15"
+                android:paddingRight="@dimen/size10"
+                android:paddingTop="@dimen/size10"
+                android:paddingBottom="@dimen/size10"
+                android:letterSpacing="0.1"
+                android:textAllCaps="true"/>
+
+            <LinearLayout
+                android:layout_width="@dimen/size30"
+                android:layout_height="@dimen/size30"
+                android:background="@drawable/circle_active_drawable">
+
+                <com.application.zapplon.utils.IconView
+                    android:id="@+id/icon_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textSize="@dimen/drawer_iconview_size"
+                    android:gravity="top|center_horizontal"
+                    android:layout_marginTop="-11dp"
+                    android:textColor="@color/white"
+                    android:text="@string/z_right_arrow"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/map_triangle"
+            android:layout_width="@dimen/size30"
+            android:layout_height="@dimen/size30"
+            android:background="@drawable/triangle"
+            android:layout_below="@id/time_container_parent"
+            android:layout_centerHorizontal="true"
+            android:rotation="180"/>
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/zdhl_stroke"
+    >
+
+    <com.application.zapplon.utils.IconView
+        android:id="@+id/location_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/size10"
+        android:text="@string/z_location"
+        android:textSize="@dimen/drawer_iconview_size"
+        android:textColor="@color/all_icon_color"
+        />
+
+    <com.application.zapplon.utils.TextViewLight
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size16"
+        android:textColor="@color/primary_text_color"
+        android:paddingTop="@dimen/size10"
+        android:paddingRight="@dimen/size10"
+        android:layout_toRightOf="@id/location_map"
+        android:singleLine="true"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:layout_alignParentTop="true"/>
+
+    <com.application.zapplon.utils.TextViewLight
+        android:id="@+id/txt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size14"
+        android:paddingRight="@dimen/size10"
+        android:paddingBottom="@dimen/size10"
+        android:gravity="top|left"
+        android:layout_toRightOf="@id/location_map"
+        android:layout_below="@id/txt"
+        android:textColor="@color/secondary_text_color"/>
+
+</RelativeLayout>

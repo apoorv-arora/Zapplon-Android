@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zhl_dark">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:background="@color/color_blue"
+        android:elevation="@dimen/toolbar_elevation"
+        android:minHeight="@dimen/action_bar_height"
+        android:popupTheme="@android:style/ThemeOverlay.Material.Light"
+        android:theme="@style/ToolbarBaseTheme"
+        android:layout_alignParentTop="true"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp" />
+
+    <com.application.zapplon.utils.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        app:pstsShouldExpand="true"
+        android:layout_below="@id/toolbar"
+        android:elevation="@dimen/toolbar_elevation"
+        android:layout_height="48dip" />
+
+    <com.application.zapplon.utils.NoSwipeViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabs"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.15dp"
+        android:layout_above="@id/pager"
+        android:background="@color/zhl_dark" />
+
+</RelativeLayout>

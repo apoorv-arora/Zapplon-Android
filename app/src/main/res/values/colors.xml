@@ -1,0 +1,94 @@
+<resources>
+
+    <color name="transparent1">#00000000</color>
+    <color name="translucent_dark_light">#20000000</color>
+    <color name="transparent_white">#e5ffffff</color>
+    <color name="dark_grey">#aeaeae</color>
+    <color name="zapplon_primary_dark">#333333</color>
+    <color name="zapplon_red_secondary">#b83a04</color>
+    <color name="zapplon_red">#e86a30</color>
+    <color name="zapplon_red_trans_fifty">#e86a30</color>
+    <color name="zapplon_red_feedback">#e86a30</color>
+    <color name="black">#000000</color>
+    <color name="zapplon_blue">#00AACC</color>
+    <color name="white">#ffffff</color>
+    <color name="font_color">#ff2d2d2a</color>
+    <color name="selected_background">#f2f2f2</color>
+    <color name="submit_green">#69bc63</color> <!-- #51a351 -->
+    <color name="submit_green_pressed">#3e873e</color>
+    <color name="separator_color">#e7e7e7</color>
+    <color name="twitter_blue">#00aced</color>
+    <color name="google_background">#dd4b39</color>
+    <color name="fb_background">#3b5998</color>
+    <color name="zhl">#f4f4f4</color>
+    <color name="zhl_light">#f8f8f8</color>
+    <color name="zhl_dark">#e4e4e4</color>
+    <color name="zhl_darker">#cbcbcb</color>
+    <color name="zhl_darkest">#9a9a9a</color>
+    <color name="zdhl6">#8D8D8D</color>
+    <color name="zdhl5">#7D7D7D</color>
+    <color name="zdhl3">#5D5D5D</color>
+    <color name="zdhl">#3D3D3D</color>
+    <color name="zdark">#2D2D2D</color>
+    <color name="zhl1.5">#EDEDED</color>
+    <color name="zapplon_darker">#1d1d1d</color>
+    <color name="black_trans_twenty">#33000000</color>
+    <color name="black_trans_fifty">#80000000</color>
+    <color name="white_trans_twenty">#33ffffff</color>
+    <color name="white_trans_ninety">#e6ffffff</color>
+    <color name="fb_background_pressed">#2d477e</color>
+    <color name="google_background_pressed">#c74231</color>
+    <color name="zhl_dark_custom">#66e4e4e4</color>
+
+    <!-- crop colors -->
+    <color name="android_light_background">#F5F5F5</color>
+    <color name="android_light_feedback">#E5E5E5</color>
+
+    <!-- Seperator Colors -->
+    <item name="color_separator_color_dark" type="color">@color/zhl_dark</item>
+
+    <!-- New shades of ZDark -->
+    <color name="zdark_1">#1a1a19</color>
+    <color name="black_trans_seventy">#B3000000</color>
+    <color name="blue_trans_ninety">#E5262933</color>
+    <color name="holo_white">#f3f3f3</color>
+    <color name="green_gradient">#00dca0</color>
+    <color name="bt_orange_2">#ffab5f</color>
+    <color name="light_stroke_color">#f1f2f2</color>
+    <color name="drawer_lighter">#939598</color>
+    <color name="transparent_super_white">#66ffffff</color>
+    <color name="white_trans_ten">#22ffffff</color>
+    <color name="black_trans_ten">#1A000000</color>
+    <color name="white_trans_eighty">#baffffff</color>
+    <color name="white_trans_seventy">#a3ffffff</color>
+    <color name="white_trans_fifty">#80ffffff</color>
+    <color name="black_trans_thirty_five">#59000000</color>
+    <color name="zhl2">#e7e7e7</color>
+    <color name="black_trans_ninety">#e5000000</color>
+    <color name="black_trans_tour">#ba000000</color>
+
+    <!-- Categories -->
+    <color name="zapplon_button">#f17e3f</color>
+    <color name="zapplon_button_dark">#e06d34</color>
+
+
+    <!-- Zapplon colors -->
+    <color name="icon_color">#BABCBE</color>
+    <color name="status_bar">#22252D</color>
+    <color name="color_blue">#262933</color>
+    <color name="active_color">#FF8703</color>
+    <color name="active_color_dark">#FF8703</color>
+    <color name="active_color_transparent_twenty">#33FF8703</color>
+    <color name="active_color_transparent_forty">#66FF8703</color>
+    <color name="active_color_transparent_fifty">#80FF8703</color>
+    <color name="active_color_transparent_sixty">#91FF8703</color>
+    <color name="active_color_transparent_eighty">#BAFF8703</color>
+    <color name="all_icon_color">#BABCBE</color>
+    <color name="primary_text_color">#212121</color>
+    <color name="secondary_text_color">#808083</color>
+    <color name="zapplon_yellow">#FFD35D</color>
+    <color name="zapplon_green">#A6C85E</color>
+    <color name="zapplon_orange">#FF8D10</color>
+
+
+</resources>

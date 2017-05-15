@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.application.zapplon.views.AddHomeLocation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            android:elevation="@dimen/shadow_elevation">
+
+            <com.application.zapplon.utils.CustomAutoCompleteTextView
+                android:id="@+id/query_string"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/action_bar_height"
+                android:hint="@string/search"
+                android:paddingLeft="58dp"
+                android:paddingRight="@dimen/size10"
+                android:paddingTop="@dimen/size5"
+                android:background="@null"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:textColor="@color/primary_text_color" />
+
+            <com.application.zapplon.utils.IconView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/z_search"
+                android:textColor="@color/all_icon_color"
+                android:layout_gravity="left"
+                android:textSize="@dimen/drawer_iconview_size" />
+
+            <com.application.zapplon.utils.IconView
+                android:id="@+id/search_close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:layout_gravity="right"
+                android:padding="@dimen/size10"
+                android:text="@string/z_cross"
+                android:textColor="@color/all_icon_color"
+                android:textSize="@dimen/drawer_iconview_size" />
+        </FrameLayout>
+
+        <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/translucent_dark_light"
+        android:layout_marginLeft="@dimen/size10"
+        android:layout_marginRight ="@dimen/size10"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clickable="true"
+            android:background="@drawable/whitebuttoncustomback">
+
+            <com.application.zapplon.utils.IconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/z_mylocation"
+                android:textSize="@dimen/drawer_iconview_size"
+                android:paddingLeft="22dp"
+                android:textColor="@color/twitter_blue"
+                android:layout_marginTop="8dp"
+                />
+
+            <com.application.zapplon.utils.TextViewBold
+                android:id="@+id/my_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:paddingRight="@dimen/size10"
+                android:paddingTop="@dimen/size10"
+                android:paddingBottom="@dimen/size15"
+                android:paddingLeft="@dimen/size20"
+                android:text="@string/my_location"
+                android:textSize="@dimen/size14"
+                android:textColor="@color/twitter_blue"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/translucent_dark_light"
+            android:layout_marginLeft="@dimen/size10"
+            android:layout_marginRight ="@dimen/size10"/>
+
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/size8"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/powered_by_google_light" />
+</RelativeLayout>

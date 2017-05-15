@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/zhl"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height=".5dp"
+        android:layout_marginTop="@dimen/size10"
+        android:background="@color/zhl_dark"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/whitebuttoncustomback"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/minimum_clickable_area"
+        android:clickable="true"
+        android:id="@+id/change_number">
+
+        <com.application.zapplon.utils.IconView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size20"
+            android:text="@string/z_changePhone"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/drawer_iconview_size" />
+
+        <com.application.zapplon.utils.TextViewThin
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/size15"
+            android:textColor="@color/zdhl3"
+            android:paddingLeft="@dimen/size20"
+            android:text="@string/change_phone_number"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height=".5dp"
+        android:background="@color/zhl_dark"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/whitebuttoncustomback"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/minimum_clickable_area"
+        android:clickable="true"
+        android:id="@+id/user_password">
+
+        <com.application.zapplon.utils.IconView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size20"
+            android:text="@string/z_changePassword"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/drawer_iconview_size" />
+
+        <com.application.zapplon.utils.TextViewThin
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/size15"
+            android:textColor="@color/zdhl3"
+            android:paddingLeft="@dimen/size20"
+            android:text="@string/set_password"/>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height=".5dp"
+        android:background="@color/zhl_dark"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/whitebuttoncustomback"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/minimum_clickable_area"
+        android:clickable="true"
+        android:id="@+id/user_feedback">
+
+        <com.application.zapplon.utils.IconView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/size20"
+            android:text="@string/z_feedback"
+            android:textColor="@color/icon_color"
+            android:textSize="@dimen/drawer_iconview_size" />
+
+        <com.application.zapplon.utils.TextViewThin
+            android:clickable="true"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size15"
+            android:textColor="@color/zdhl3"
+            android:paddingLeft="@dimen/size20"
+            android:text="@string/send_feedback"/>
+
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height=".5dp"
+        android:background="@color/zhl_dark"
+        />
+
+</LinearLayout>

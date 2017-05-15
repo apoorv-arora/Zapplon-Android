@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <GridLayout
+        android:id="@+id/bottom_images_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:columnCount="5"
+        android:rowCount="1"
+        android:padding="@dimen/size10"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/fbInvite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="12dp" />
+
+        <ImageView
+            android:id="@+id/whatsappInvite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="12dp" />
+
+        <ImageView
+            android:id="@+id/mailInvite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="12dp" />
+        <ImageView
+            android:id="@+id/twitterInvite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="12dp" />
+        <ImageView
+            android:id="@+id/pinInvite"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="12dp" />
+
+    </GridLayout>
+
+    <com.application.zapplon.utils.TextViewThin
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_above="@id/bottom_images_container"
+        android:layout_centerHorizontal="true"
+        android:text="@string/invite_media"
+        android:textColor="@color/zhl_darkest"
+        android:textSize="@dimen/size14" />
+
+    <com.application.zapplon.utils.TextViewThin
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/zapp_collect"
+        android:textColor="@color/zhl_darkest"
+        android:textSize="@dimen/size14" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@id/text2"
+        android:orientation="vertical">
+
+        <com.application.zapplon.utils.TextViewThin
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/available_zapps"
+            android:textColor="@color/zhl_darkest"
+            android:textSize="@dimen/size14" />
+
+        <com.application.zapplon.utils.TextViewThin
+            android:id="@+id/earned_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/zdhl"
+            android:textSize="@dimen/size35" />
+
+    </LinearLayout>
+
+</RelativeLayout>

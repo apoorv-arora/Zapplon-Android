@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <com.application.zapplon.utils.TextViewLight
+        android:id="@+id/status"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/secondary_text_color"
+        android:padding="@dimen/size20"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:background="@color/zhl"
+        android:textSize="@dimen/size14" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/status"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Location containers -->
+
+            <com.application.zapplon.utils.TextViewBold
+                android:id="@+id/location_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/secondary_text_color"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/size30"
+                android:layout_marginTop="@dimen/size10"
+                android:paddingTop="@dimen/size5"
+                android:paddingBottom="@dimen/size5"
+                android:paddingRight="@dimen/size5"
+                android:text="@string/location_label_confirm"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/size14"/>
+
+            <RelativeLayout
+                android:id="@+id/location_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_height_2"
+                android:background="@color/white"
+                android:layout_below="@id/location_label">
+
+                <ImageView
+                    android:id="@+id/pickdrop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/action_bar_height_2"
+                    android:layout_marginLeft="@dimen/size10"
+                    android:layout_marginRight="@dimen/size10"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginBottom="@dimen/size10"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/size10"
+                    android:paddingTop="@dimen/size15"
+                    android:paddingBottom="@dimen/size15"
+                    android:src="@drawable/pick_drop"/>
+
+                <LinearLayout
+                    android:id="@+id/start_location_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_height"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/size10"
+                    android:layout_toRightOf="@id/pickdrop"
+                    android:clickable="true"
+                    android:background="@drawable/whitebuttoncustomback">
+
+                    <com.application.zapplon.utils.TextViewThin
+                        android:id="@+id/start_location"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/primary_text_color"
+                        android:singleLine="true"
+                        android:textColorHint="@color/secondary_text_color"
+                        android:hint="Start Location"
+                        android:textSize="@dimen/size14"
+                        android:layout_weight="1"
+                        android:ellipsize="end"/>
+
+                    <com.application.zapplon.utils.IconView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/size10"
+                        android:text="@string/z_search"
+                        android:textColor="@color/all_icon_color"
+                        android:textSize="@dimen/drawer_iconview_size"
+                        android:visibility="invisible"
+                        android:layout_marginTop="-10dp"
+                        android:clickable="false"/>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_toRightOf="@id/pickdrop"
+                    android:layout_below="@id/start_location_container"
+                    android:layout_marginLeft="@dimen/size10"
+                    android:background="@color/translucent_dark_light"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/action_bar_height"
+                    android:orientation="horizontal"
+                    android:layout_toRightOf="@id/pickdrop"
+                    android:layout_below="@id/view1"
+                    android:layout_marginLeft="@dimen/size10"
+                    android:id="@+id/dropLoc_container">
+
+                    <com.application.zapplon.utils.TextViewThin
+                        android:id="@+id/drop_location"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="fill_parent"
+                        android:singleLine="true"
+                        android:textColor="@color/primary_text_color"
+                        android:background="@drawable/whitebuttoncustomback"
+                        android:textColorHint="@color/secondary_text_color"
+                        android:hint="Drop Location"
+                        android:gravity="center_vertical"
+                        android:textSize="@dimen/size14"/>
+
+                    <com.application.zapplon.utils.IconView
+                        android:id="@+id/search_close_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:padding="@dimen/size10"
+                        android:text="@string/z_cross"
+                        android:textColor="@color/all_icon_color"
+                        android:visibility="gone"
+                        android:textSize="@dimen/drawer_iconview_size" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <com.application.zapplon.utils.TextViewBold
+                android:id="@+id/pickup_date_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/secondary_text_color"
+                android:layout_below="@id/location_container"
+                android:layout_marginLeft="@dimen/size30"
+                android:layout_marginTop="@dimen/size10"
+                android:paddingTop="@dimen/size5"
+                android:paddingBottom="@dimen/size5"
+                android:paddingRight="@dimen/size5"
+                android:text="@string/pickup_label_confirm"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/size14"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_height"
+                android:orientation="horizontal"
+                android:layout_below="@id/pickup_date_label"
+                android:paddingLeft="@dimen/size10"
+                android:background="@drawable/whitebuttoncustomback"
+                android:id="@+id/pickup_timer_container">
+
+                <com.application.zapplon.utils.IconView
+                    android:id="@+id/pickup_time_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/all_icon_color"
+                    android:text="@string/z_timer"
+                    android:paddingLeft="@dimen/size10"
+                    android:textSize="@dimen/drawer_iconview_size"/>
+
+                <com.application.zapplon.utils.TextViewThin
+                    android:id="@+id/pickup_timer"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_text_color"
+                    android:textColorHint="@color/secondary_text_color"
+                    android:layout_marginLeft="@dimen/size25"
+                    android:hint="@string/set_pickup_time"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/size14"/>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_toRightOf="@id/pickup_date_label"
+                android:layout_below="@id/pickup_timer_container"
+                android:layout_marginLeft="@dimen/size10"
+                android:background="@color/translucent_dark_light"/>
+
+            <com.application.zapplon.utils.TextViewBold
+                android:id="@+id/drop_date_label"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="@color/secondary_text_color"
+                android:layout_below="@id/view2"
+                android:layout_marginLeft="@dimen/size30"
+                android:paddingTop="@dimen/size5"
+                android:paddingBottom="@dimen/size5"
+                android:paddingRight="@dimen/size5"
+                android:layout_marginTop="@dimen/size10"
+                android:text="@string/drop_label_confirm"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/size14"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/action_bar_height"
+                android:orientation="horizontal"
+                android:layout_below="@id/drop_date_label"
+                android:paddingLeft="@dimen/size10"
+                android:background="@drawable/whitebuttoncustomback"
+                android:id="@+id/drop_date_container">
+
+                <com.application.zapplon.utils.IconView
+                    android:id="@+id/drop_time_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/all_icon_color"
+                    android:text="@string/z_timer"
+                    android:paddingLeft="@dimen/size10"
+                    android:textSize="@dimen/drawer_iconview_size"/>
+
+                <com.application.zapplon.utils.TextViewThin
+                    android:id="@+id/drop_timer"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="fill_parent"
+                    android:singleLine="true"
+                    android:textColor="@color/primary_text_color"
+                    android:textColorHint="@color/secondary_text_color"
+                    android:layout_marginLeft="@dimen/size25"
+                    android:hint="@string/set_drop_date"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/size14"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@id/drop_date_container"
+                android:id="@+id/top_container"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/cab_icon2"
+                    android:layout_width="@dimen/size30"
+                    android:layout_height="@dimen/size30"
+                    android:layout_marginTop="@dimen/size10"
+                    android:layout_marginBottom="@dimen/size10"
+                    android:layout_marginLeft="@dimen/size10"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.6"
+                    android:layout_marginLeft="@dimen/size10"
+                    android:orientation="vertical">
+
+                    <com.application.zapplon.utils.TextViewThin
+                        android:id="@+id/display_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/primary_text_color"
+                        android:paddingTop="@dimen/size10"
+                        android:gravity="bottom"
+                        android:textSize="@dimen/size16" />
+
+                    <com.application.zapplon.utils.TextViewLight
+                        android:id="@+id/cab_type2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary_text_color"
+                        android:textSize="@dimen/size12"
+                        android:letterSpacing="0.1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/zapps_container"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:visibility="invisible"
+                    android:orientation="vertical">
+
+                    <com.application.zapplon.utils.TextViewThin
+                        android:id="@+id/zapp_count2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/active_color"
+                        android:paddingTop="@dimen/size10"
+                        android:gravity="bottom"
+                        android:textSize="@dimen/size16" />
+
+                    <com.application.zapplon.utils.TextViewLight
+                        android:id="@+id/zapp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/secondary_text_color"
+                        android:text="@string/zapps"
+                        android:textSize="@dimen/size12"
+                        android:letterSpacing="0.1"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/surge_container"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2.6"
+                    android:visibility="invisible"
+                    android:paddingTop="-15dp"
+                    android:orientation="vertical">
+
+                    <com.application.zapplon.utils.IconView
+                        android:id="@+id/surge_icon2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="U"
+                        android:textColor="@color/active_color"
+                        android:textSize="@dimen/size22" />
+
+                    <com.application.zapplon.utils.TextViewLight
+                        android:id="@+id/surge_value2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/active_color"
+                        android:paddingTop="@dimen/size10"
+                        android:textAllCaps="true"
+                        android:textSize="@dimen/size12"
+                        android:letterSpacing="0.1"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/middle_container"
+                android:layout_width="match_parent"
+                android:layout_below="@id/top_container"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/zhl_light">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_separator_color_dark" />
+
+                <LinearLayout
+                    android:id="@+id/cab_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:baselineAligned="false"
+                    android:paddingLeft="@dimen/size50">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <com.application.zapplon.utils.TextViewThin
+                                android:paddingTop="@dimen/size15"
+                                android:id="@+id/time2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/primary_text_color"
+                                android:textSize="@dimen/size16" />
+
+                            <com.application.zapplon.utils.TextViewLight
+                                android:id="@+id/away"
+                                android:paddingBottom="@dimen/size15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/secondary_text_color"
+                                android:text="@string/away"
+                                android:textAllCaps="true"
+                                android:textSize="@dimen/size12"
+                                android:letterSpacing="0.1"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="right"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:layout_marginRight="@dimen/size10"
+                                android:layout_width="1dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/color_separator_color_dark" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+                            <com.application.zapplon.utils.TextViewThin
+                                android:paddingTop="@dimen/size15"
+                                android:id="@+id/travel_cost"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/primary_text_color"
+                                android:textSize="@dimen/size16" />
+
+                            <com.application.zapplon.utils.TextViewLight
+                                android:paddingBottom="@dimen/size15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/base_fare"
+                                android:textAllCaps="true"
+                                android:textColor="@color/secondary_text_color"
+                                android:textSize="@dimen/size12"
+                                android:letterSpacing="0.1"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:gravity="right"
+                            android:paddingTop="@dimen/size15"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <com.application.zapplon.utils.TextViewLight
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="+"
+                                android:textColor="@color/secondary_text_color"
+                                android:layout_marginRight="@dimen/size15"
+                                android:textSize="@dimen/size14" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <com.application.zapplon.utils.TextViewThin
+                            android:paddingTop="@dimen/size15"
+                            android:id="@+id/rate_per_KM2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/primary_text_color"
+                            android:textSize="@dimen/size16" />
+
+                        <com.application.zapplon.utils.TextViewLight
+                            android:paddingBottom="@dimen/size10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/per_km"
+                            android:textColor="@color/secondary_text_color"
+                            android:textSize="@dimen/size12"
+                            android:letterSpacing="0.1"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <View
+                    android:id="@+id/border"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_separator_color_dark" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tos_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/middle_container"
+                android:orientation="vertical">
+
+                <com.application.zapplon.utils.TextViewLight
+                    android:id="@+id/terms_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary_text_color"
+                    android:paddingTop="@dimen/size10"
+                    android:text="@string/terms_conditions"
+                    android:padding="@dimen/size10"
+                    android:textSize="@dimen/size12" />
+
+                <com.application.zapplon.utils.TextViewThin
+                    android:id="@+id/terms_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/secondary_text_color"
+                    android:paddingTop="@dimen/size10"
+                    android:padding="@dimen/size10"
+                    android:textSize="@dimen/size12" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/submit_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zapplon_button_feedback"
+        android:layout_alignParentBottom="true"
+        android:baselineAligned="false"
+        android:clickable="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/size15"
+        android:gravity="center"
+        android:elevation="@dimen/shadow_elevation">
+
+        <com.application.zapplon.utils.TextViewBold
+            android:text="@string/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:id="@+id/pay"
+            android:textSize="@dimen/size14"
+            />
+    </LinearLayout>
+</RelativeLayout>

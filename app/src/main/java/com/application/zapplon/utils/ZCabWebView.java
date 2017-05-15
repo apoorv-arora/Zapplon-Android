@@ -1,0 +1,216 @@
+package com.application.zapplon.utils;
+
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.os.Build;
+import android.os.Bundle;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.view.MenuItem;
+import android.view.View;
+import android.webkit.HttpAuthHandler;
+import android.webkit.WebSettings;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
+
+import com.application.zapplon.R;
+import com.application.zapplon.ZApplication;
+import com.application.zapplon.data.TaxiBookings;
+
+/**
+ * Created by Saurabh on 2/17/2016.
+ */
+public class ZCabWebView extends AppCompatActivity {
+    private int width;
+
+    private String mUrl;
+    private String mTitle;
+
+    boolean loadingFinished = true;
+    boolean redirect = false;
+    ZApplication zapp;
+    Bundle bundle;
+    int position;
+    private TaxiBookings taxiBookings;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.webview_layout);
+
+        bundle = getIntent().getExtras();
+
+        if (bundle != null) {
+            if (bundle.get("title") != null)
+                mTitle = bundle.getString("title");
+            if (bundle.get("url") != null)
+                mUrl = bundle.getString("url");
+            if (bundle.get("position") != null && bundle.get("position") instanceof Integer)
+                position = bundle.getInt("position");
+            if (bundle.get("taxiBookings") != null)
+                taxiBookings = (TaxiBookings) bundle.getSerializable("taxiBookings");
+        }
+
+        zapp = (ZApplication) getApplication();
+        setUpActionBar();
+        findViewById(R.id.loader).setVisibility(View.VISIBLE);
+        findViewById(R.id.webView).setVisibility(View.GONE);
+
+        final WebView webView = (WebView) findViewById(R.id.webView);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+
+        CommonLib.ZLog("DBug", "webview url " + mUrl);
+        webView.loadUrl(mUrl);
+        webView.setWebViewClient(new WebViewClient() {
+
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                loadingFinished = false;
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                if (!loadingFinished) {
+                    redirect = true;
+                }
+                loadingFinished = false;
+                if(mUrl.contains("uber")) {
+                    if (url.contains("zapplon") && url.contains("code")) {
+                        // capture the code and make the post request to fetch the access token from uber
+                        // https://zapplon.com/uber?code=c2EihshVpES3Y3naL48hF61F9sLlkG
+                        String token = url.substring(url.indexOf("?"));
+                        int endIndex = token.length();
+                        if ( token.indexOf("&") != -1 )
+                            endIndex = token.indexOf("&");
+                        token = token.substring(token.indexOf("=") + 1, endIndex);
+                        Bundle mBundle = new Bundle();
+                        mBundle.putString("token", token);
+                        mBundle.putInt("position", position);
+                        Intent resultIntent = new Intent();
+                        resultIntent.putExtras(mBundle);
+                        setResult(RESULT_OK, resultIntent);
+                        try {
+                            CommonLib.hideKeyBoard(ZCabWebView.this, findViewById(R.id.webView));
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                        finish();
+                    } else {
+                        view.loadUrl(url);
+                    }
+                } else {
+                    if (url.contains("zapplon")) {
+                        if (url.contains("access_token")) {
+                            String token = url.substring(url.indexOf("#"));
+                            token = token.substring(token.indexOf("=") + 1, token.indexOf("&"));
+                            Bundle mBundle = new Bundle();
+                            mBundle.putString("token", token);
+                            if (url.contains("expires_in=")) {
+                                try {
+                                    long expiresIn = Long.parseLong(url.substring(url.lastIndexOf("expires_in=") + 11));
+                                    mBundle.putLong("deletionTime", expiresIn);
+                                } catch (Exception e) {
+                                    e.printStackTrace();
+                                }
+                            }
+                            mBundle.putInt("position", position);
+                            Intent resultIntent = new Intent();
+                            resultIntent.putExtras(mBundle);
+                            setResult(RESULT_OK, resultIntent);
+                            finish();
+                        } else if (url.contains("status")) {
+                            Intent resultIntent = new Intent();
+                            Bundle bundle = new Bundle();
+                            bundle.putSerializable("booking", taxiBookings);
+                            try {
+                                long status = Long.parseLong(url.substring(url.lastIndexOf("status=") + 7));
+                                bundle.putLong("intercityBookingStatus", status);
+                            } catch (Exception e) {
+                                e.printStackTrace();
+                            }
+                            resultIntent.putExtras(bundle);
+                            setResult(CommonLib.PAYMENT_REQUEST_CODE_THIRD_PARTY_COLLECTOR, resultIntent);
+                            finish();
+                        } else {
+                            view.loadUrl(url);
+                        }
+                    } else {
+                        view.loadUrl(url);
+                    }
+                }
+                return false;
+            }
+
+            @Override
+            public void onPageFinished(WebView view, String url) {
+                if (!redirect) {
+                    loadingFinished = true;
+                }
+
+                if (loadingFinished && !redirect) {
+                    findViewById(R.id.loader).setVisibility(View.GONE);
+                    findViewById(R.id.webView).setVisibility(View.VISIBLE);
+
+                } else {
+                    redirect = false;
+                }
+            }
+
+            @Override
+            public void onReceivedHttpAuthRequest(WebView view, HttpAuthHandler handler, String host, String realm) {
+                // handler.proceed("staging", "phaughoXii5ayu");
+            }
+        });
+    }
+
+    private void setUpActionBar() {
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowCustomEnabled(false);
+        actionBar.setDisplayShowTitleEnabled(true);
+        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeButtonEnabled(true);
+        actionBar.setDisplayUseLogoEnabled(true);
+
+        SpannableString s = new SpannableString(mTitle);
+        s.setSpan(
+                new TypefaceSpan(getApplicationContext(), CommonLib.BOLD_FONT_FILENAME,
+                        getResources().getColor(R.color.white), getResources().getDimension(R.dimen.size16)),
+                0, s.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+        final boolean isAndroidL = Build.VERSION.SDK_INT >= 21; // Build.AndroidL
+        if (!isAndroidL)
+            actionBar.setBackgroundDrawable(getResources().getDrawable(R.drawable.zapplon_dark_feedback));
+
+        actionBar.setTitle(s);
+    }
+
+    public void goBack(View view) {
+        onBackPressed();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onBackPressed() {
+        try {
+            CommonLib.hideKeyBoard(ZCabWebView.this, findViewById(R.id.webView));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        super.onBackPressed();
+    }
+}

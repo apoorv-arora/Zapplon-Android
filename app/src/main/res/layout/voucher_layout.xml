@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:layout_margin="@dimen/size10"
+    android:elevation="@dimen/shadow_elevation">
+
+    <ImageView
+        android:id="@+id/v_image"
+        android:layout_width="@dimen/size45"
+        android:layout_height="@dimen/size45"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"/>
+
+    <com.application.zapplon.utils.TextViewBold
+        android:id="@+id/redeem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size10"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:text="@string/redeem"
+        android:textAllCaps="true"
+        android:background="@drawable/blue_button_feedback"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size14" />
+
+    <LinearLayout
+        android:id="@+id/price_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size5"
+        android:layout_toRightOf="@id/v_image"
+        android:layout_toLeftOf="@id/price_container"
+        android:orientation="vertical">
+
+        <com.application.zapplon.utils.TextViewBold
+            android:id="@+id/company_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size10"
+            android:textAllCaps="true"
+            android:textColor="@color/zhl_darkest"
+            android:textSize="@dimen/size14" />
+
+        <com.application.zapplon.utils.TextViewBold
+            android:id="@+id/v_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10"
+            android:paddingTop="@dimen/size10"
+            android:textColor="@color/zapplon_blue"
+            android:textSize="@dimen/size14" />
+
+        <com.application.zapplon.utils.TextViewBold
+            android:id="@+id/v_value_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10"
+            android:paddingBottom="@dimen/size10"
+            android:textColor="@color/zapplon_red_secondary"
+            android:textSize="@dimen/size12" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/userpage_progress_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:visibility="gone" >
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/content_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fillViewport="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white" >
+
+            <FrameLayout
+                android:id="@+id/user_info_top_frame"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" >
+
+                <FrameLayout
+                    android:id="@+id/user_info_frame"
+                    android:layout_width="fill_parent"
+                    android:layout_height="150dp"
+                    android:paddingBottom="30dp" >
+
+                    <ImageView
+                        android:id="@+id/drawer_user_info_background_image"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:scaleType="centerCrop" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/black_trans_twenty" />
+
+                    <View
+                        android:id="@+id/drawer_user_gradient_bottom"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/drawer_gradient_bottom" />
+                </FrameLayout>
+
+                <com.application.zapplon.utils.ZCircularImageView
+                    android:id="@+id/user_image"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="2dp" />
+            </FrameLayout>
+
+            <com.application.zapplon.utils.IconView
+                android:id="@+id/back_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:text="D"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_size45" />
+
+            <com.application.zapplon.utils.TextViewLight
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_info_top_frame"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size14" />
+
+            <com.application.zapplon.utils.TextViewThin
+                android:id="@+id/description"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="5"
+                android:scrollbars="vertical"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size14" />
+
+            <com.application.zapplon.utils.TextViewThin
+                android:id="@+id/showall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description"
+                android:layout_centerHorizontal="true"
+                android:background="@color/green_gradient"
+                android:clickable="true"
+                android:gravity="center_horizontal"
+                android:onClick="expandDescription"
+                android:padding="@dimen/size10"
+                android:text="@string/show_more"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size14" />
+        </RelativeLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/empty_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.application.zapplon.utils.IconView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="k"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/height150" />
+
+        <TextView
+            android:id="@+id/empty_view_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/no_internet_message"
+            android:textColor="@color/dark_grey" />
+
+        <LinearLayout
+            android:id="@+id/empty_view_retry_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_zdhl4_drawable"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <com.application.zapplon.utils.IconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="e"
+                android:textColor="@color/z_grey_font_color"
+                android:textSize="@dimen/size22" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

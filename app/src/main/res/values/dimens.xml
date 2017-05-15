@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="size3">3.65dp</dimen>
+    <dimen name="size5">5dp</dimen>
+    <dimen name="size7">7dp</dimen>
+    <dimen name="size8">8dp</dimen>
+    <dimen name="size10">10dp</dimen>
+    <dimen name="size12">12dp</dimen>
+    <dimen name="size13">13dp</dimen>
+    <dimen name="size14">14dp</dimen>
+    <dimen name="size15">15dp</dimen>
+    <dimen name="size16">16dp</dimen>
+    <dimen name="size18">18dp</dimen>
+    <dimen name="size20">20dp</dimen>
+    <dimen name="size23">23dp</dimen>
+    <dimen name="size25">25dp</dimen>
+    <dimen name="size22">22dp</dimen>
+    <dimen name="size26">26dp</dimen>
+    <dimen name="size30">30dp</dimen>
+    <dimen name="size35">35dp</dimen>
+    <dimen name="size38">38dp</dimen>
+    <dimen name="size40">40dp</dimen>
+    <dimen name="size42">42dp</dimen>
+    <dimen name="size45">45dp</dimen>
+    <dimen name="size50">50dp</dimen>
+    <dimen name="size55">55dp</dimen>
+    <dimen name="height60">75dp</dimen>
+    <dimen name="height1">1dp</dimen>
+    <dimen name="height2">2dp</dimen>
+    <dimen name="height3">3dp</dimen>
+    <dimen name="height5">5dp</dimen>
+    <dimen name="height10">10dp</dimen>
+    <dimen name="height15">15dp</dimen>
+    <dimen name="height32">32dp</dimen>
+    <dimen name="height42">42dp</dimen>
+    <dimen name="height46">46dp</dimen>
+    <dimen name="height85">85dp</dimen>
+    <dimen name="action_bar_height">52dp</dimen>
+    <dimen name="action_bar_height_2">104dp</dimen>
+    <dimen name="height150">150dp</dimen>
+
+    <!--
+	<dimen name="corner_radius">3dp</dimen>
+	<dimen name="corner_radius_four">4dp</dimen>
+
+    -->
+
+    <dimen name="corner_radius">1dp</dimen>
+    <dimen name="corner_radius_tour">2dp</dimen>
+    <dimen name="corner_radius_verified">4dp</dimen>
+    <dimen name="drawer_iconview_size">25dp</dimen>
+    <dimen name="drawer_iconview_size_big">45dp</dimen>
+    <dimen name="drawer_iconview_size_x_large">135dp</dimen>
+
+
+    <!-- Crop dimensions -->
+
+    <!-- Icon Sizes -->
+
+    <!-- Map Scribble Stroke -->
+
+    <!-- Collection Card rounding -->
+
+    <!-- FAB -->
+    <dimen name="drawer_text_left_padding">72dp</dimen>
+    <item name="drawer_icon_left_padding" type="dimen">28dp</item>
+
+    <!-- Drawer dimensions -->
+    <item name="drawer_text_size" type="dimen">14dp</item>
+
+    <!-- Material dimensions -->
+    <item name="toolbar_height" type="dimen">@dimen/height46</item>
+    <item name="minimum_clickable_area" type="dimen">52dp</item>
+    <item name="minimum_clickable_area_small" type="dimen">48dp</item>
+    <item name="toolbar_padding" type="dimen">16dp</item>
+    <item name="shadow_elevation" type="dimen">2.15dp</item>
+
+    <!-- Drawer Icon Sizes -->
+    <item name="topBottomBarArrowSize" type="dimen">11.31dp</item>
+    <item name="thickness" type="dimen">2dp</item>
+    <item name="barSize" type="dimen">18dp</item>
+    <item name="gapBetweenBars" type="dimen">3dp</item>
+    <item name="middleBarArrowSize" type="dimen">16dp</item>
+    <item name="drawableSize" type="dimen">24dp</item>
+
+    <item name="toolbar_elevation" type="dimen">4dp</item>
+
+    <dimen name="font_size45">45dp</dimen>
+
+    <item name="toolbar_height_restaurant" type="dimen">50dp</item>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <!-- Text Sizes -->
+    <dimen name="font_large">16sp</dimen>
+
+    <!-- Zapplon Text Sizes -->
+    <dimen name="z_font_small">12dp</dimen>
+    <dimen name="z_font_medium">14dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="share_button_margin">75dp</dimen>
+</resources>

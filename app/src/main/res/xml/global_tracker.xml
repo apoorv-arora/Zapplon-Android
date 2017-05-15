@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="TypographyDashes">
+
+    <string name="ga_trackingId">UA-71808244-1</string>
+	
+	<integer name="ga_sessionTimeout">30</integer>    
+
+	<bool name="ga_autoActivityTracking">true</bool>
+
+    <!-- Enable automatic exception tracking -->
+    <bool name="ga_reportUncaughtExceptions">true</bool>
+
+    <screenName name="com.application.zapplon.views.AboutUs">About us</screenName>
+    <screenName name="com.application.zapplon.views.DealVerificationPage">Deal Verification</screenName>
+    <screenName name="com.application.zapplon.views.FeedbackPage">Feedback</screenName>
+    <screenName name="com.application.zapplon.views.Home">Home</screenName>
+    <screenName name="com.application.zapplon.views.MapPage">Mappage</screenName>
+    <screenName name="com.application.zapplon.views.MerchantRatingScreen">Merchant Rating</screenName>
+    <screenName name="com.application.zapplon.views.SearchActivity">Search</screenName>
+    <screenName name="com.application.zapplon.views.SearchResultsActivity">Search Results</screenName>
+    <screenName name="com.application.zapplon.views.SplashScreen">Splash Screen</screenName>
+    <screenName name="com.application.zapplon.views.StoreCatalogue">Spot Browse</screenName>
+    <screenName name="com.application.zapplon.views.StoreDetailsPage">Store Details Page</screenName>
+    <screenName name="com.application.zapplon.views.UserPageActivity">User Profile Page</screenName>
+    <screenName name="com.application.zapplon.views.WishHistoryActivity">My Deals</screenName>
+    <screenName name="com.application.zapplon.views.ZMenuGallery">Menu Gallery</screenName>
+
+</resources>

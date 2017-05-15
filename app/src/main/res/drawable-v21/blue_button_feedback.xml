@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/transparent_super_white" >
+
+    <item
+        android:id="@android:id/mask"
+        android:state_pressed="true">
+        <shape android:shape="rectangle" >
+            <corners android:radius="@dimen/corner_radius_tour" />
+
+            <solid android:color="@color/fb_background_pressed" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle" >
+            <corners android:radius="@dimen/corner_radius_tour" />
+
+            <solid android:color="@color/fb_background" />
+        </shape>
+    </item>
+
+</ripple>

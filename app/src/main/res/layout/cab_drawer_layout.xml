@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingBottom="12dp"
+    android:background="#ffffffff">
+
+        <ImageView
+            android:id="@+id/ola_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/olaicon"/>
+
+        <ImageView
+            android:id="@+id/easy_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/easycabs_logo"/>
+        <ImageView
+            android:id="@+id/mega_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/megacabs"/>
+        <ImageView
+            android:id="@+id/jugnoo_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="12dp" 
+            android:src="@drawable/jugnoo"/>
+        <ImageView
+            android:id="@+id/ridz_icon"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/ridz"/>
+</LinearLayout>

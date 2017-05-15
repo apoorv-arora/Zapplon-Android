@@ -1,0 +1,61 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/blue_trans_ninety">
+
+    <com.application.zapplon.utils.IconView
+        android:id="@+id/widget_close_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_gravity="top|right"
+        android:padding="@dimen/size10"
+        android:text="@string/z_cross"
+        android:textColor="@color/all_icon_color"
+        android:textSize="@dimen/drawer_iconview_size"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <com.application.zapplon.utils.TextViewLight
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/speak_now"
+        android:textColor="@color/white"
+        android:gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/size16"
+        android:letterSpacing=".1"
+        android:padding="@dimen/size10"
+        android:id="@+id/speakNow"
+        android:visibility="invisible"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/speak_button_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/btnSpeak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_mic_none_white_48dp"/>
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/speechList"
+        android:visibility="visible"
+        android:layout_above="@id/speak_button_container"
+        android:layout_below="@+id/speakNow"/>
+
+</RelativeLayout>

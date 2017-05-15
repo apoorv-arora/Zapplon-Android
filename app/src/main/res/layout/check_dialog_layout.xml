@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/size5"
+    android:paddingBottom="@dimen/size10"
+    android:background="@color/android_light_background">
+
+    <com.application.zapplon.utils.TextViewThin
+        android:id="@+id/email_input_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:gravity="center"
+        android:paddingBottom="@dimen/height10"
+        android:paddingLeft="@dimen/height15"
+        android:paddingTop="@dimen/height10"
+        android:text="Checking Network State"
+        android:textColor="@color/zhl_darkest"
+        android:textSize="@dimen/size16" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/email_input_message"
+        android:background="@color/android_light_background" />
+
+    <com.application.zapplon.utils.TextViewThin
+        android:id="@+id/offlineText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center|center_horizontal"
+        android:padding="@dimen/size5"
+        android:layout_marginLeft="60dp"
+        android:text="Offline"
+        android:background="@drawable/blue_button_feedback"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size18"
+        android:layout_below="@+id/line"
+        android:layout_alignLeft="@+id/email_input_message"
+        android:layout_alignStart="@+id/email_input_message"
+        android:layout_marginStart="60dp" />
+
+    <com.application.zapplon.utils.TextViewThin
+        android:id="@+id/onlineText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:gravity="center|center_horizontal"
+        android:padding="@dimen/size5"
+        android:layout_marginLeft="240dp"
+        android:text="Online"
+        android:background="@drawable/blue_button_feedback"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size18"
+        android:layout_below="@+id/line"
+        android:layout_alignLeft="@+id/email_input_message"
+        android:layout_alignStart="@+id/email_input_message"
+        android:layout_marginStart="60dp" />
+
+</RelativeLayout>

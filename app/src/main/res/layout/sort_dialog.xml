@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/zhl">
+
+    <com.application.zapplon.utils.TextViewThin
+        android:id="@+id/sort_by"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/size15"
+        android:textSize="@dimen/size14"
+        android:textColor="@color/zdhl5"
+        android:textAllCaps="true"
+        android:text="@string/sort_by"/>
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height=".5dp"
+        android:background="@color/zdhl5"
+        android:layout_below="@id/sort_by"
+        android:layout_marginTop="@dimen/size10"
+        android:layout_marginLeft="@dimen/size5"
+        android:layout_marginRight="@dimen/size5"
+        />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/separator"
+        android:orientation="horizontal">
+
+        <com.application.zapplon.utils.TextViewThin
+            android:id="@+id/amount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/amount"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/size10"
+            android:paddingBottom="@dimen/size10"
+            android:textSize="@dimen/size12"
+            android:clickable="true"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:background="@drawable/zhlbuttonfeedback"
+            android:textColor="@color/zdhl5"/>
+
+        <com.application.zapplon.utils.TextViewThin
+            android:id="@+id/arrival_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/recommended"
+            android:paddingTop="@dimen/size10"
+            android:paddingBottom="@dimen/size10"
+            android:textSize="@dimen/size12"
+            android:clickable="true"
+            android:textAllCaps="true"
+            android:background="@drawable/zhlbuttonfeedback"
+            android:textColor="@color/zdhl5"/>
+
+        <com.application.zapplon.utils.TextViewThin
+            android:id="@+id/recommended"
+            android:layout_width="0dp"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/recommended"
+            android:paddingTop="@dimen/size10"
+            android:paddingBottom="@dimen/size10"
+            android:textSize="@dimen/size12"
+            android:clickable="true"
+            android:textAllCaps="true"
+            android:background="@drawable/zhlbuttonfeedback"
+            android:textColor="@color/zdhl5"/>
+
+    </LinearLayout>
+</RelativeLayout>

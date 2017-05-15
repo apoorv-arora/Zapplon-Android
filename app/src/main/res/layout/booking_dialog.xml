@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@color/white"
+    android:layout_height="wrap_content" >
+
+    <com.application.zapplon.utils.TextViewBold
+        android:id="@+id/booking_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+
+        android:clickable="true"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/height10"
+        android:paddingLeft="@dimen/height15"
+        android:paddingTop="@dimen/height10"
+        android:text="@string/booking_dialog_title"
+        android:textColor="@color/active_color"
+        android:textSize="@dimen/size14" />
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="fill_parent"
+        android:layout_height=".5dp"
+        android:layout_below="@id/booking_title"
+        android:background="@color/zhl" />
+
+    <LinearLayout
+        android:id="@+id/coupon_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line"
+        android:visibility="gone"
+        android:padding="@dimen/size10"
+        android:orientation="horizontal">
+
+        <com.application.zapplon.utils.EditTextLight
+            android:id="@+id/coupon_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/custombackandroidlight"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/height10"
+            android:hint="@string/coupon_code_input"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size18" />
+
+        <com.application.zapplon.utils.TextViewThin
+            android:id="@+id/apply_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/blue_button_feedback"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/height10"
+            android:text="@string/apply"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size18" />
+
+        <com.application.zapplon.utils.TextViewThin
+            android:id="@+id/coupon_code_validity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/custombackandroidlight"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/height10"
+            android:hint="@string/coupon_code_input"
+            android:textColor="@color/zapplon_red_secondary"
+            android:textSize="@dimen/size18" />
+
+        <com.application.zapplon.utils.TextViewThin
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@drawable/custombackandroidlight"
+            android:clickable="true"
+            android:gravity="center_vertical"
+            android:padding="@dimen/height10"
+            android:hint="@string/coupon_code_input"
+            android:textColor="@color/zapplon_red_secondary"
+            android:textSize="@dimen/size18" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="fill_parent"
+        android:layout_height=".5dp"
+        android:layout_below="@id/coupon_container"
+        android:layout_marginTop="@dimen/size10"
+        android:background="@color/zhl_dark" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/line1"
+        android:orientation="horizontal">
+
+        <com.application.zapplon.utils.TextViewThin
+            android:id="@+id/cancel_action"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/zhlbuttonfeedback"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="@dimen/height10"
+            android:text="@string/dialog_cancel"
+            android:letterSpacing=".1"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="@dimen/size12" />
+
+        <com.application.zapplon.utils.TextViewThin
+            android:id="@+id/confirm_cab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/zapplon_button_feedback"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="@dimen/height10"
+            android:text="@string/confirm"
+            android:textColor="@color/white"
+            android:letterSpacing=".1"
+            android:textSize="@dimen/size12" />
+    </LinearLayout>
+
+</RelativeLayout>

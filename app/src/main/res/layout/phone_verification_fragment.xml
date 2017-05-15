@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zhl"
+    android:padding="@dimen/size20"
+    android:orientation="vertical">
+
+    <com.application.zapplon.utils.TextViewBold
+        android:id="@+id/verify_phone_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="@string/please_verify_phone"
+        android:padding="@dimen/size20"
+        android:textColor="@color/zdark" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zhllightbuttonfeedback"
+        android:layout_marginTop="@dimen/size20"
+        android:layout_marginBottom="@dimen/size20"
+        android:orientation="horizontal">
+
+        <com.application.zapplon.utils.TextViewThin
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/rounded_zhldark_button"
+            android:gravity="center"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:text="+91"
+            android:padding="@dimen/size10"
+            android:textColor="@color/zdhl3"
+            android:layout_marginRight="@dimen/size10"
+            android:textSize="@dimen/size18" />
+
+        <com.application.zapplon.utils.EditTextLight
+            android:id="@+id/phone_number"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/rounded_right_corner_white"
+            android:gravity="center"
+            android:inputType="phone"
+            android:padding="@dimen/size20"
+            android:maxLength="10"
+            android:textColor="@color/zdark"
+            android:textSize="@dimen/size18" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/proceed_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_green_button"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/size20"
+        android:layout_marginBottom="@dimen/size20"
+        android:orientation="horizontal">
+
+        <com.application.zapplon.utils.TextViewBold
+            android:id="@+id/proceed_button_text"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/verify"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size15"
+            android:padding="@dimen/size10"
+            android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/proceed_button_progress"
+            style="?android:attr/progressBarStyleSmallInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <com.application.zapplon.utils.TextViewThin
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingLeft="@dimen/size10"
+        android:paddingRight="@dimen/size10"
+        android:text="@string/verify_phone_sms"
+        android:textColor="@color/zdhl3"
+        android:padding="@dimen/size20"
+        android:textSize="@dimen/size14" />
+
+</LinearLayout>

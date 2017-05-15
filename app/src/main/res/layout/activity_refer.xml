@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/zhl_dark" >
+
+    <com.application.zapplon.utils.IconView
+        android:id="@+id/refer_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color_blue"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/height60"
+        android:text="@string/z_referral"
+        android:layout_marginTop="@dimen/size10"
+        android:padding="@dimen/size10"
+        />
+
+    <com.application.zapplon.utils.TextViewLight
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/refer_line_1"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:id="@+id/refer_line_1"
+        android:textColor="@color/primary_text_color"
+        android:padding="@dimen/size10"
+        android:layout_marginTop="@dimen/size10"
+        android:textSize="@dimen/size14"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/size10"
+        android:layout_marginTop="@dimen/size10"
+        android:gravity="center">
+
+        <View
+            android:layout_width="0dp"
+            android:id="@+id/line1"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/height1"
+            android:layout_weight="1"
+            android:background="@color/icon_color"
+            android:visibility="visible"/>
+
+        <com.application.zapplon.utils.TextViewLight
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share_via"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            android:id="@+id/share_via"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="@dimen/size14"/>
+
+        <View
+            android:layout_width="0dp"
+            android:id="@+id/line2"
+            android:layout_gravity="center"
+            android:layout_height="@dimen/height1"
+            android:layout_weight="1"
+            android:background="@color/icon_color"
+            android:visibility="visible"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <GridLayout
+            android:id="@+id/bottom_images_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:columnCount="5"
+            android:rowCount="1"
+            android:layout_gravity="bottom|center"
+            android:padding="@dimen/size10"
+            android:gravity="bottom|center">
+
+            <ImageView
+                android:id="@+id/fbInvite"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/whatsappInvite"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/mailInvite"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_margin="12dp"/>
+            <ImageView
+                android:id="@+id/twitterInvite"
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:layout_height="50dp"
+                android:layout_margin="12dp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/pinInvite"
+                android:layout_width="50dp"
+                android:layout_gravity="center"
+                android:layout_height="50dp"
+                android:layout_margin="12dp"
+                android:visibility="gone"/>
+
+        </GridLayout>
+    </ScrollView>
+</LinearLayout>

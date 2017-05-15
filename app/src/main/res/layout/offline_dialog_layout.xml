@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/action_bar_height"
+            android:background="@color/color_blue"
+            android:elevation="@dimen/toolbar_elevation"
+            android:minHeight="@dimen/action_bar_height"
+            android:popupTheme="@android:style/ThemeOverlay.Material.Light"
+            android:theme="@style/ToolbarBaseTheme"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp" />
+
+        <com.application.zapplon.utils.TextViewThin
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="@dimen/size10"
+            android:text="@string/offline_message"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="@dimen/size16" />
+
+        <com.application.zapplon.utils.TextViewBold
+            android:id="@+id/ride_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size10"
+            android:textSize="@dimen/size12"
+            android:text="@string/ride_type"/>
+        <RadioGroup
+            android:id="@+id/cab_type_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size10"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/type_auto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Auto"/>
+
+            <RadioButton
+                android:id="@+id/type_cab"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cab"/>
+        </RadioGroup>
+
+
+        <com.application.zapplon.utils.TextViewBold
+            android:id="@+id/addresses_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/size10"
+            android:text="@string/pick_location"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="@dimen/size12" />
+
+        <FrameLayout
+            android:id="@+id/search_sec"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+
+
+            <com.application.zapplon.utils.CustomAutoCompleteTextView
+                android:id="@+id/query_string"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/action_bar_height"
+                android:hint="@string/search"
+                android:paddingLeft="58dp"
+                android:paddingRight="@dimen/size30"
+                android:paddingTop="@dimen/size5"
+                android:background="@null"
+                android:singleLine="true"
+                android:ellipsize="end"
+
+                android:textColor="@color/primary_text_color" />
+
+            <com.application.zapplon.utils.IconView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:text="@string/z_search"
+                android:textColor="@color/all_icon_color"
+                android:layout_gravity="left"
+                android:textSize="@dimen/drawer_iconview_size" />
+
+            <com.application.zapplon.utils.IconView
+                android:id="@+id/search_close_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:layout_gravity="right"
+                android:padding="@dimen/size10"
+                android:text="@string/z_cross"
+                android:textColor="@color/all_icon_color"
+                android:textSize="@dimen/drawer_iconview_size" />
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/or_sec"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.application.zapplon.utils.TextViewBold
+                android:id="@+id/or"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/size10"
+                android:textSize="@dimen/size12"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:text="@string/or"/>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_toLeftOf="@id/or"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/size10"
+                android:background="@color/color_separator_color_dark" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_toRightOf="@id/or"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/size10"
+                android:background="@color/color_separator_color_dark" />
+
+
+
+
+        </RelativeLayout>
+
+
+        <ListView
+            android:id="@+id/address_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/zhl"
+            android:cacheColorHint="@android:color/transparent"
+            android:childDivider="@color/transparent1"
+            android:divider="@color/zhl_darker"
+            android:dividerHeight="@dimen/height1" />
+
+        <View
+            android:id="@+id/blank_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/separator"
+                android:layout_width="match_parent"
+                android:layout_height=".5dp"
+                android:background="@color/zhl" />
+
+            <LinearLayout
+                android:id="@+id/offline_footer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <com.application.zapplon.utils.IconView
+                    android:id="@+id/book_call"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/z_redeem"
+                    android:textColor="@color/zapplon_blue"
+                    android:paddingTop="@dimen/size10"
+                    android:paddingBottom="@dimen/size10"
+                    android:gravity="center"
+                    android:textSize="@dimen/drawer_iconview_size"
+                    android:visibility="gone"
+                    android:background="@drawable/zhlbuttonfeedback"
+                    android:clickable="true"
+                    android:layout_gravity="center"/>
+
+                <View
+                    android:layout_width=".5dp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone"
+                    android:background="@color/zhl" />
+
+                <TextView
+                    android:id="@+id/book_message"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="@string/book_now"
+                    android:paddingTop="@dimen/size10"
+                    android:paddingBottom="@dimen/size10"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/zapplon_button_feedback"
+                    android:textSize="@dimen/drawer_iconview_size"
+                    android:clickable="true"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

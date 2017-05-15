@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color_blue" >
+
+    <LinearLayout
+        android:id="@+id/signup_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@color/holo_white">
+
+        <LinearLayout
+            android:id="@+id/tour_dots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="@dimen/size15"  />
+
+        <com.application.zapplon.utils.TextViewThin
+            android:id="@+id/seconds"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size30"
+            android:layout_marginRight="@dimen/size10"
+            android:layout_marginTop="@dimen/size5"
+            android:gravity="center"
+            android:text="@string/seconds_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size10" />
+
+        <LinearLayout
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size10"
+            android:layout_marginLeft="@dimen/size20"
+            android:layout_marginRight="@dimen/size20"
+            android:paddingBottom="@dimen/size10"
+            android:baselineAligned="false"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/facebook_login"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/blue_button_feedback"
+                android:layout_marginRight="@dimen/size5"
+                android:gravity="center"
+                android:layout_weight="1">
+
+                <com.application.zapplon.utils.IconView
+                    android:layout_width="@dimen/action_bar_height"
+                    android:layout_height="@dimen/action_bar_height"
+                    android:textSize="@dimen/drawer_iconview_size"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:layout_marginRight="-5dp"
+                    android:layout_marginTop="-7dp"
+                    android:text="@string/z_facebook_borderless"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/google_login"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/size5"
+                android:background="@drawable/google_button_feedback"
+                android:layout_weight="1">
+
+                <com.application.zapplon.utils.IconView
+                    android:layout_width="@dimen/action_bar_height"
+                    android:layout_height="@dimen/action_bar_height"
+                    android:textSize="@dimen/drawer_iconview_size"
+                    android:textColor="@color/white"
+                    android:layout_marginTop="-7dp"
+                    android:gravity="center"
+                    android:text="@string/z_google_borderless"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.application.zapplon.utils.TextViewThin
+            android:id="@+id/pinky_promise_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/size30"
+            android:layout_marginRight="@dimen/size10"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/size5"
+            android:gravity="center"
+            android:text="@string/pinky_promise"
+            android:textColor="@color/black"
+            android:textSize="@dimen/size10" />
+
+        <View
+            android:id="@+id/layout_signup_separator"
+            android:layout_width="fill_parent"
+            android:layout_height=".5dp"
+            android:layout_marginTop="@dimen/size5"
+            android:background="@color/all_icon_color" />
+
+        <RelativeLayout
+            android:id="@+id/login_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/layout_login_separator"
+                android:layout_width=".5dp"
+                android:layout_height="@dimen/size35"
+                android:layout_gravity="end"
+                android:layout_centerHorizontal="true"
+                android:background="@color/all_icon_color" />
+
+            <com.application.zapplon.utils.TextViewBold
+                android:id="@+id/layout_signup_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/email_signup"
+                android:textColor="@color/secondary_text_color"
+                android:clickable="true"
+                android:textAllCaps="true"
+                android:layout_toLeftOf="@id/layout_login_separator"
+                android:onClick="animateScreens"
+                android:textSize="@dimen/size14"
+                android:paddingTop="@dimen/size10"
+                android:paddingBottom="@dimen/size10"
+                android:background="@drawable/login_button_feedback"
+                android:layout_gravity="center"/>
+
+            <com.application.zapplon.utils.TextViewBold
+                android:id="@+id/layout_login_text"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/Login"
+                android:textColor="@color/secondary_text_color"
+                android:textAllCaps="true"
+                android:layout_toRightOf="@id/layout_login_separator"
+                android:background="@drawable/login_button_feedback"
+                android:clickable="true"
+                android:paddingTop="@dimen/size10"
+                android:paddingBottom="@dimen/size10"
+                android:gravity="center"
+                android:onClick="animateScreens"
+                android:textSize="@dimen/size14" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/main_root"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/signup_container"
+        android:visibility="visible"
+        android:background="@color/color_blue">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tour_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.application.zapplon.utils.TextViewLight
+            android:id="@+id/skip_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size10"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:paddingLeft="@dimen/size10"
+            android:paddingRight="@dimen/size10"
+            android:paddingTop="@dimen/size5"
+            android:paddingBottom="@dimen/size5"
+            android:textColor="@color/white"
+            android:text="@string/skip_login"
+            android:textSize="@dimen/size14"
+            android:background="@drawable/round_corner_borders_zdark_drawable"/>
+
+        <FrameLayout
+            android:id="@+id/skip_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/photo_feedback"
+            android:clickable="true"
+            android:layout_margin="@dimen/size10"
+            android:visibility="visible"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true">
+
+            <com.application.zapplon.utils.TextViewLight
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/size10"
+                android:paddingRight="@dimen/size10"
+                android:paddingTop="@dimen/size5"
+                android:paddingBottom="@dimen/size5"
+                android:textColor="@color/white"
+                android:text="@string/skip"
+                android:textSize="@dimen/size14"
+                android:visibility="gone"/>
+
+        </FrameLayout>
+    </RelativeLayout>
+
+
+    <include
+        android:id="@+id/main_login_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/login_page"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/main_signup_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        layout="@layout/login_page"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+</RelativeLayout>

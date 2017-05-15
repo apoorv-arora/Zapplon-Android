@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/booking_history_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/size10"
+    android:background="@color/white"
+    android:elevation="@dimen/shadow_elevation">
+
+    <ImageView
+        android:layout_marginTop="@dimen/size10"
+        android:id="@+id/cab_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/cab_type"
+        android:layout_marginTop="@dimen/size10"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/size10"
+            >
+
+            <com.application.zapplon.utils.TextViewLight
+                android:id="@+id/booking_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/booking_id"
+                android:textAllCaps="true"
+                android:textColor="@color/zdhl5"
+                android:textSize="@dimen/size14" />
+
+            <com.application.zapplon.utils.TextViewBold
+                android:id="@+id/booking_id_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/booking_id"
+                android:paddingLeft="@dimen/size10"
+                android:textColor="@color/zdhl3"
+                android:textSize="@dimen/size14" />
+
+            <LinearLayout
+                android:id="@+id/zapps_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true">
+
+                <com.application.zapplon.utils.TextViewLight
+                    android:id="@+id/zapps_redeemed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/zdhl3"
+                    android:textSize="@dimen/size14" />
+
+                <com.application.zapplon.utils.TextViewLight
+                    android:id="@+id/zapps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/active_color"
+                    android:text="@string/zapps"
+                    android:textSize="@dimen/size14" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/location_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/size10"
+            android:paddingBottom="@dimen/size10"
+            android:paddingRight="@dimen/size10"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.application.zapplon.utils.IconView
+                    android:id="@+id/z_circle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent1"
+                    android:clickable="true"
+                    android:text="@string/z_circle"
+                    android:textColor="@color/zapplon_green"
+                    android:textSize="@dimen/size14" />
+
+                <com.application.zapplon.utils.TextViewThin
+                    android:id="@+id/from_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/z_circle"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:paddingLeft="@dimen/size10"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_grey"
+                    android:textSize="@dimen/font_large" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/to_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.application.zapplon.utils.IconView
+                    android:id="@+id/z_circle_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent1"
+                    android:clickable="true"
+                    android:text="@string/z_circle"
+                    android:textColor="@color/zapplon_orange"
+                    android:textSize="@dimen/size14" />
+
+                <com.application.zapplon.utils.TextViewThin
+                    android:id="@+id/to_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/z_circle_2"
+                    android:ellipsize="end"
+                    android:gravity="center_vertical"
+                    android:hint=""
+                    android:paddingLeft="@dimen/size10"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/dark_grey"
+                    android:textSize="@dimen/font_large" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/size10"
+            android:paddingBottom="@dimen/size10"
+            android:paddingRight="@dimen/size10"
+            android:orientation="horizontal">
+
+            <com.application.zapplon.utils.TextViewLight
+                android:id="@+id/booking_amount_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_weight="1"
+                android:textColor="@color/zdhl3"
+                android:textSize="@dimen/size14" />
+
+            <com.application.zapplon.utils.TextViewLight
+                android:id="@+id/trip_time_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textColor="@color/zdhl3"
+                android:textSize="@dimen/size14" />
+
+            <com.application.zapplon.utils.TextViewLight
+                android:id="@+id/booking_status_text"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/active_color"
+                android:textSize="@dimen/size14" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height=".5dp"
+            android:background="@color/separator_color"></View>
+
+
+        <LinearLayout
+            android:id="@+id/cancel_tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size10"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <com.application.zapplon.utils.TextViewBold
+                android:id="@+id/cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+
+                android:gravity="center"
+                android:padding="@dimen/size10"
+                android:text="@string/booking_cancel"
+                android:textAllCaps="true"
+                android:textColor="@color/zdhl5"
+                android:textSize="@dimen/size14" />
+
+            <View
+                android:layout_width=".5dp"
+                android:layout_height="match_parent"
+                android:background="@color/separator_color"></View>
+
+
+            <com.application.zapplon.utils.TextViewBold
+
+                android:id="@+id/share"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size20"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/size10"
+                android:text="@string/booking_share"
+                android:textAllCaps="true"
+                android:textColor="@color/zdhl5"
+                android:textSize="@dimen/size14" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

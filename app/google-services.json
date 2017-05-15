@@ -1,0 +1,61 @@
+{
+  "project_info": {
+    "project_id": "api-project-481732547877",
+    "project_number": "481732547877",
+    "name": "Google Play Android Developer"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:481732547877:android:87d8f6217adcb624",
+        "client_id": "android:com.application.zapplon",
+        "client_type": 1,
+        "android_client_info": {
+          "package_name": "com.application.zapplon",
+          "certificate_hash": []
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "481732547877-rbponah52a0hi813lk0sp9plia27o4fh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.application.zapplon",
+            "certificate_hash": "7714FBD24474412D3B7CF8D428364E6FF0E087E2"
+          }
+        },
+        {
+          "client_id": "481732547877-sarqur92gh8uu4upj9gk3bd5fh7l8i3o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "cloud_messaging_service": {
+          "status": 1,
+          "apns_config": []
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "481732547877-sarqur92gh8uu4upj9gk3bd5fh7l8i3o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "google_signin_service": {
+          "status": 2
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "client_info": [],
+  "ARTIFACT_VERSION": "1"
+}

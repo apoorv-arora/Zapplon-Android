@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Zapplon</string>
+    <string name="app_id">1640657659526412</string>
+    <string name="pre_signup_description">Book any cab, any time!</string>
+    <string name="pinky_promise">It\'s a private ritual. God promise ;)</string>
+    <string name="seconds_text">It will take less than 5 seconds.</string>
+    <string name="could_not_connect">Could not connect to server</string>
+    <string name="signingup_wait">Verifying credentials!\nPlease wait...</string>
+    <string name="logout">Sign out</string>
+    <string name="logout_confirm">Are you sure?</string>
+    <string name="add_home_location">Add Home Location</string>
+    <string name="add_work_location">Add Work Location</string>
+
+    <!-- Fragment titles -->
+
+    <!-- Store types -->
+    <string name="cabs_booking">Cab Booking</string>
+
+    <!-- Error messages -->
+    <string name="no_internet_message">Seems like you are not connected to the internet. Please try again later.</string>
+    <string name="error_try_again">Something went wrong. \n Please try again later.</string>
+    <string name="err_occurred">An error occurred. Please try again.</string>
+    <string name="offline_message">Your internet is down, but no problem, you can still book auto/cab from the below points.</string>
+
+    <!-- Drawer strings -->
+    <string name="feedback">Feedback</string>
+    <string name="send_feedback">Send Feedback</string>
+    <string name="set_password">Change Password</string>
+    <string name="about_us">About</string>
+    <string name="feedback_title">Feedback</string>
+    <string name="deal_history_text">My Bookings</string>
+    <string name="refer_earn">Refer &amp; Earn</string>
+    <string name="settings">Settings</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="offline_title">Offline Mode</string>
+    <string name="book_offline">Book Offline</string>
+
+    <string name="ride_type">Pick ride type</string>
+    <string name="pick_location">Pick your location</string>
+    <string name="or">Or</string>
+
+    <string name="book_cab">Book your cab</string>
+
+    <!-- Feedback -->
+    <string name="feedback_hint">Write something...</string>
+    <string name="feedback_email">If you have something to say that doesn\'t fit here, please shoot us an email at hello@zapplon.com</string>
+    <string name="feedback_email_subject">Zapplon Android App Feedback</string>
+    <string name="send_mail">Send Mail</string>
+    <string name="no_email_clients">There are no email clients installed.</string>
+
+    <!-- Share -->
+    <string name="toast_share_longpress">Share</string>
+
+    <!-- About us -->
+    <string name="about_title">About Us</string>
+    <string name="about_version">v2.58</string>
+    <string name="about_text">Zapplon makes it easy and fast to find cabs near you on-the-go.</string>
+    <string name="about_us_terms_of_use">Terms of Service</string>
+    <string name="about_us_privacypolicy">Privacy Policy</string>
+
+    <!-- Redeem -->
+    <string name="redeem">Redeem</string>
+    <string name="redeem_your_zapps">Redeem Zapps</string>
+    <string name="book_now">Book Now</string>
+    <string name="recommend">Recommended</string>
+    <string name="book">Book</string>
+    <string name="confirm_cab_detail">Please review your trip details and hit Pay</string>
+    <string name="confirm_booking">Confirm Booking</string>
+    <!-- Deals history -->
+
+    <!-- Dialog strings -->
+    <string name="dialog_call">Call</string>
+    <string name="dialog_cancel">Cancel</string>
+
+    <!-- Map page -->
+
+    <!-- Deal verification -->
+
+    <!-- Rate us -->
+    <string name="rate_app">Rate us on the Play Store</string>
+    <string name="rate_dialog_message">Help us spread the word. Rate us on Google Play.</string>
+    <string name="rate_dialog_rate_now">Yes, let\'s do it</string>
+    <string name="rate_dialog_remind">Remind me later</string>
+    <string name="rate_dialog_never">Don\'t show this dialog again</string>
+    <string name="rate_dialog_google_text">or share on Google+</string>
+
+    <!-- Deal types -->
+    <string name="deal_1">Deal 1</string>
+    <string name="deal_2">Deal 2</string>
+    <string name="deal_3">Deal 3</string>
+    <string name="deal_4">Deal 4</string>
+
+    <!-- Store details -->
+
+    <!-- Rating system -->
+    <string name="submit">Submit</string>
+    <string name="refreshlistview_arrow">Content Description Arrow</string>
+    <string name="refreshlistview_pulldown">Pull down to refresh…</string>
+    <string name="refreshlistview_updating">Updating…</string>
+    <string name="refreshlistview_release">Release to refresh…</string>
+    <string name="tour_01">Choose and Book your taxi from various options...</string>
+    <string name="tour_02">Track and Share your ride with your Besties!</string>
+    <string name="tour_03">Earn Zapps on every ride!!!</string>
+    <string name="yayee">Yay!!!</string>
+    <string name="call_customer_care">Call Customer care</string>
+
+    <string name="show_more">Show more</string>
+    <string name="show_less">Show less</string>
+
+    <string name="update_google_play_services">Update google play services</string>
+
+    <string name="sort_by">Sort by:</string>
+
+    <!-- Table Reservation details -->
+    <string name="view_rate_card">Rate Card</string>
+    <string name="my_location">Use my location</string>
+    <string name="recent_searches">Recent Searches</string>
+    <string name="verify">Verify</string>
+    <string name="please_verify_phone">Please verify your phone number.</string>
+    <string name="verify_phone_sms">We will send you a code via SMS to verify this number.</string>
+    <string name="verification_code_message">We have sent a 4-digit verification code on %1$s via SMS. Please enter it below, and you\'re done!</string>
+    <string name="edit_number">Edit Number</string>
+    <string name="resend_code">Resend Code</string>
+    <string name="retry_in">Resend in %1$s sec</string>
+    <string name="change_phone_number">Change Phone Number</string>
+    <string name="enter_pin">Enter Pin</string>
+
+    <string name="location">Location</string>
+    <string name="set_pickup_time">Set pickup time</string>
+    <string name="set_drop_date">Set drop date</string>
+    <string name="round_trip">Round Trip</string>
+    <string name="one_way">One Way</string>
+
+
+    <string name="comming_soon">Comming Soon</string>
+
+    <string name="email_required_text">OOPS!\n We couldn\'t fetch email.</string>
+    <string name="email_required_hint">Email</string>
+    <string name="connected_accounts">Connected Accounts</string>
+    <string name="change_password">Change Password</string>
+    <string name="old_password">Old Password</string>
+    <string name="new_password">New Password</string>
+
+    <string name="ola">Ola</string>
+    <string name="uber">Uber</string>
+
+    <string name="connect_to_uber">Connect to Uber</string>
+    <string name="connect_to_ola">Connect to Ola</string>
+
+    <string name="connected_to_uber">Connected to Uber</string>
+    <string name="connected_to_ola">Connected to Ola</string>
+    <string name="confirm">Confirm</string>
+    <string name="logout_ola">Sign out from OLA</string>
+    <string name="logout_confirm_ola">Are you sure you want to sign out from OLA?</string>
+    <string name="logout_uber">Sign out from UBER</string>
+    <string name="logout_confirm_uber">Are you sure you want to sign out from UBER?</string>
+    <string name="booking_confirmed">Your booking is confirmed</string>
+    <string name="call_driver">Call Driver</string>
+    <string name="amount">Price</string>
+    <string name="sort">Sort</string>
+    <string name="arrival_time">Arrival time</string>
+    <string name="recommended">Recommended</string>
+    <string name="cancel_cab">Cancel Cab</string>
+    <string name="cancel">Cancel</string>
+    <string name="nevermind">Nevermind</string>
+    <string name="select">Select</string>
+    <string name="surge">Surge</string>
+
+    <string name="my_bookings">My Bookings</string>
+    <string name="booking_id">BookingID:</string>
+    <string name="booking_amount">Amount:</string>
+    <string name="trip_time">Time:</string>
+    <string name="trip_status">Status:</string>
+    <string name="booking_cancel">Cancel</string>
+    <string name="cancel_ride">Cancel Ride</string>
+    <string name="booking_share">Share</string>
+    <string name="tracking">Tracking</string>
+
+    <string name="Select_dates">Select Date</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="opening_time">Pickup time</string>
+    <string name="pick_a_date">Pickup time</string>
+
+    <string name="app_invite_title">Zapplon App Invite</string>
+    <string name="app_invite_description">Have you tried the Zapplon app yet?</string>
+    <string name="invitation_cta">Invitation</string>
+    <string name="skip">Skip</string>
+    <string name="set_pickup_location">Set pickup location</string>
+    <string name="title_activity_refer">ReferActivity</string>
+
+    <string name="refer">REFER YOUR FRIENDS</string>
+    <string name="refer_line_1">Both you and your friend will get 50 Zapps on sign up</string>
+    <string name="share_via">Refer via</string>
+
+    <string name="available_zapps">Available Zapps</string>
+    <string name="total_zapps">TOTAL ZAPPS BALANCE</string>
+    <string name="zapp_collect">Refer your friends and collect Zapps</string>
+    <string name="invite_media">Tap below to invite friends</string>
+
+    <string name="loading_points">Loading points...</string>
+
+    <!-- Booking dialog -->
+    <string name="booking_dialog_title">We are booking your cab</string>
+    <string name="coupon_code_input">Any Coupon?</string>
+    <string name="apply">Apply</string>
+    <string name="skip_login">Skip Login</string>
+
+    <string name="going_somewhere_text">Hi %1$s! Going somewhere?</string>
+    <string name="all">All</string>
+    <string name="car">Car</string>
+    <string name="auto">Auto</string>
+    <string name="bike">Bike</string>
+    <string name="cabs">Cabs</string>
+    <string name="suv">SUV</string>
+    <string name="tempo">Tempo</string>
+    <string name="intercity">Intercity</string>
+    <string name="intracity">Intracity</string>
+    <string name="ride_uber">Ride with Uber</string>
+    <string name="self_drive">Self Drive</string>
+
+    <!--Miscellaneous-->
+    <string name="estimate">Estimate</string>
+
+    <string name="sedan">Sedan</string>
+    <string name="compact">Compact</string>
+    <string name="luxury">Luxury</string>
+
+    <string name="away">Away</string>
+    <string name="base_fare">Base Fare</string>
+    <string name="per_km">PER KM</string>
+    <string name="eta">ETA</string>
+    <string name="add_destination">Add destination to calculate\nETA &amp; Estimate cost</string>
+    <string name="zapps">zapps</string>
+    <string name="seats">seats</string>
+    <string name="zapp">zapp</string>
+    <string name="search">Search</string>
+    <string name="driver">Driver</string>
+
+
+    <string name="redeem_zapps">REDEEM YOUR ZAPPS</string>
+
+    <string name="booking_failed">Booking Failed</string>
+    <string name="booking_pending">Booking Failed</string>
+    <string name="booking_retrying">Booking Failed</string>
+    <string name="no_booking">No booking</string>
+    <string name="cashback">Cashback</string>
+    <string name="invoice">Invoice</string>
+
+    <string name="booking_successful">YOUR BOOKING IS SUCCESSFUL</string>
+    <string name="client_located">DRIVER IS ON THE WAY</string>
+    <string name="trip_start">HAVE A SAFE JOURNEY</string>
+    <string name="trip_end">THANK YOU FOR USING ZAPPLON</string>
+    <string name="cancelled">YOUR BOOKING IS CANCELLED</string>
+
+
+    <string name="speech_prompt">Say something&#8230;</string>
+    <string name="speech_not_supported">Sorry! Your device doesn\'t support speech input</string>
+    <string name="speak_now">Speak Now</string>
+    <string name="login_using_email">Or Login Using Email</string>
+    <string name="email">Email</string>
+    <string name="email_username">Email</string>
+    <string name="forgot_password_header">Forgot password?</string>
+    <string name="password">Password</string>
+    <string name="Login">Login</string>
+    <string name="signup_terms">By creating an account, you agree to Zapplon\'s Terms of Service and Privacy Policy.</string>
+    <string name="login_terms">By logging in you agree to Zapplon\'s Terms of Service and Privacy Policy.</string>
+    <string name="email_signup">Sign up</string>
+    <string name="signup_using_email">Or Sign Up Using Email</string>
+    <string name="already_have_account">Already have an account?</string>
+    <string name="signup_facebook">Sign up via Facebook</string>
+    <string name="signup_google">Sign up via Google+</string>
+    <string name="edit_name_hint">Name</string>
+    <string name="verifying_creds">Verifying credentials..</string>
+    <string name="login_via_facebook">Log in via Facebook</string>
+    <string name="login_google">Log in via Google+</string>
+    <string name="title_activity_password_reset">PasswordResetActivity</string>
+    <string name="refer_app">Hey, Download this amazing app called Zapplon and collect 50 zapps right away. Also, avail upto 30% cashback on your next cab ride.</string>
+    //billing summary
+    <string name="bill">Trip Summary</string>
+    <string name="trip_complete">Trip Completed</string>
+    <string name="trip_cancel">Trip has been cancelled</string>
+    <string name="bill_title">Bill Summary</string>
+    <string name="rate_your_trip">Rate your trip</string>
+    <string name="zapps_earned">zapps earned</string>
+    <string name="reason">Reason</string>
+    <string name="pick_reason">Please pick a reason to cancel</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Payment -->
+    <string name="option_text">Select an option to pay</string>
+    <string name="payumoney_text">PayUmoney</string>
+    <string name="pickup_time">Pick up Time</string>
+    <string name="pickup_date">Pick up Date</string>
+    <string name="drop_date">Drop date</string>
+
+    <string name="location_label">What\'s the plan?</string>
+    <string name="pickup_label">When are you leaving?</string>
+    <string name="drop_label">And back?</string>
+    <string name="drop_label_toast">When are you back?</string>
+    <string name="pickup_point_toast">Please select your pickup point</string>
+    <string name="drop_point_toast">Please select your drop point</string>
+    <string name="from_to_same">You can\'t travel to the same city! Try changing the drop location.</string>
+
+    <string name="terms_conditions">Terms and Conditions</string>
+
+    <string name="pickup_label_confirm">Leaving on</string>
+    <string name="drop_label_confirm">And back on</string>
+    <string name="location_label_confirm">The plan</string>
+    <string name="booking_your_cab">Please wait while we book your cab...</string>
+    <string name="payment_failed">Payment failed</string>
+    <string name="pay_now">Pay now</string>
+
+
+
+</resources>

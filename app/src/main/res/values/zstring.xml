@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Big characters -->
+    <string name="z_drawer">A</string>
+    <string name="z_cross">B</string>
+    <string name="z_left_arrow">C</string>
+    <string name="z_right_arrow">D</string>
+    <string name="z_user">E</string>
+    <string name="z_refer">F</string>
+    <string name="z_connected">G</string>
+    <string name="z_rate">H</string>
+    <string name="z_about">I</string>
+    <string name="z_settings">J</string>
+    <string name="z_signout">K</string>
+    <string name="z_all">L</string>
+    <string name="z_cab">M</string>
+    <string name="z_auto">N</string>
+    <string name="z_bike">O</string>
+    <string name="z_search">P</string>
+    <string name="z_work">Q</string>
+    <string name="z_home">R</string>
+    <string name="z_location">S</string>
+    <string name="z_mylocation">T</string>
+    <string name="z_surge">U</string>
+    <string name="z_facebook">V</string>
+    <string name="z_google">W</string>
+    <string name="z_retry">X</string>
+    <string name="z_down_arrow">Y</string>
+    <string name="z_selfdrive">Z</string>
+    <string name="z_intercity">[</string>
+
+    <!-- Special characters -->
+    <string name="z_feedback">\\</string>
+    <string name="z_changePhone">]</string>
+    <string name="z_changePassword">g</string>
+
+    <!-- Small characters -->
+    <string name="z_privacy">a</string>
+    <string name="z_facebook_borderless">b</string>
+    <string name="z_smile">c</string>
+    <string name="z_tos">d</string>
+    <string name="z_google_borderless">e</string>
+    <string name="z_zapps">f</string>
+
+    <string name="z_referral">i</string>
+    <string name="z_share">j</string>
+    <string name="z_redeem">k</string>
+
+    <string name="z_tour_2">l</string>
+    <string name="z_tour_1">m</string>
+    <string name="z_tour_3">n</string>
+
+    <string name="z_circle">p</string>
+    <string name="z_timer">s</string>
+    <string name="z_offline">u</string>
+    <string name="z_suv">v</string>
+    <string name="z_hactchback">w</string>
+    <string name="z_tempo">x</string>
+    <string name="z_sedan">y</string>
+    <string name="z_luxury">z</string>
+
+</resources>

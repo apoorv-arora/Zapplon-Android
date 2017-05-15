@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.application.zapplon.utils.TextViewThin
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="center"
+        android:padding="@dimen/size20"
+        android:textColor="@color/primary_text_color"
+        android:background="@drawable/whitebuttoncustomback"
+        android:textColorHint="@color/secondary_text_color"
+        android:text="Cancelling ride?? Why o Why!"
+        android:textSize="@dimen/size18"/>
+
+    <ScrollView
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size10">
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/radio_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Other"/>
+        </RadioGroup>
+    </ScrollView>
+    
+
+    <com.application.zapplon.utils.EditTextLight
+        android:id="@+id/reason_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black_trans_ten"
+        android:hint="@string/reason"
+        android:inputType="textPersonName"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:padding="@dimen/size20"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white_trans_eighty"
+        android:textSize="@dimen/size15"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height=".5dp"
+        android:background="@color/separator_color"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.application.zapplon.utils.TextViewBold
+            android:id="@+id/cancelButton"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:textSize="@dimen/size14"
+            android:padding="@dimen/size10"
+            android:text="@string/cancel_ride"
+            android:textAllCaps="true"
+            android:textColor="@color/zdhl5"/>
+
+        <View
+            android:layout_width=".5dp"
+            android:layout_height="match_parent"
+            android:background="@color/separator_color"></View>
+
+
+        <com.application.zapplon.utils.TextViewBold
+
+            android:id="@+id/abort"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/size14"
+            android:padding="@dimen/size10"
+            android:layout_marginLeft="@dimen/size20"
+            android:text="@string/nevermind"
+            android:textAllCaps="true"
+            android:textColor="@color/zdhl5"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

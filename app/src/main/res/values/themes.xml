@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="ZapplonThemeNoTitleBar" parent="android:Theme.Holo">
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="ZapplonActionBarThemeBase" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/color_blue</item>
+        <item name="colorPrimaryDark">@color/status_bar</item>
+        <item name="colorAccent">@color/zapplon_red_trans_fifty</item>
+    </style>
+
+    <style name="ZapplonActionBarTheme" parent="@style/ZapplonActionBarThemeBase">
+        <item name="colorPrimary">@color/color_blue</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="colorPrimaryDark">@color/status_bar</item>
+        <item name="colorAccent">@color/zapplon_red_trans_fifty</item>
+    </style>
+
+    <style name="ZapplonActionBarThemeDefault" parent="android:Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/ZapplonActionBarDefault</item>
+        <item name="android:actionBarTabStyle">@style/ZapplonActionBarTabs</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:homeAsUpIndicator">@drawable/backarrow_androiddb</item>
+    </style>
+
+    <style name="ZapplonActionBarHome" parent="android:Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/color_blue</item>
+        <item name="android:height">@dimen/action_bar_height</item>
+        <item name="android:displayOptions">showCustom</item>
+        <item name="android:backgroundStacked">@color/white</item>
+    </style>
+
+    <style name="ZapplonActionBar" parent="android:Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/color_blue</item>
+        <item name="android:height">@dimen/action_bar_height</item>
+        <item name="android:displayOptions">showCustom</item>
+        <item name="android:backgroundStacked">@color/white</item>
+        <item name="android:titleTextStyle">@style/myTheme.ActionBar.Text</item>
+    </style>
+
+    <style name="myTheme.ActionBar.Text" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ZapplonActionBarTabs" parent="@android:style/Widget.Holo.Light.ActionBar.TabView">
+        <item name="android:background">@drawable/actionbar_tab_indicator</item>
+    </style>
+
+    <style name="ZapplonActionBarDefault" parent="android:Widget.Holo.Light.ActionBar">
+        <item name="android:background">@color/zapplon_darker</item>
+        <item name="android:height">@dimen/action_bar_height</item>
+        <item name="android:displayOptions">showCustom</item>
+        <item name="android:backgroundStacked">@color/zhl</item>
+    </style>
+
+    <style name="ZapplonActionBarHomeTheme" parent="@style/ZapplonHomeBaseTheme">
+        <item name="colorPrimary">@color/color_blue</item>
+    </style>
+
+    <style name="ZapplonSplashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_blue</item>
+        <item name="colorPrimaryDark">@color/status_bar</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:textColorSecondary">@color/zapplon_red</item>
+        <item name="android:textColorPrimary">@color/zapplon_red</item>
+        <item name="actionMenuTextColor">@color/zapplon_red</item>
+    </style>
+    
+    <style name="ZapplonHomeBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_blue</item>
+        <item name="colorPrimaryDark">@color/status_bar</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:actionBarDivider">@null</item>
+        <item name="android:textColorSecondary">@color/zapplon_red</item>
+        <item name="android:textColorPrimary">@color/zapplon_red</item>
+        <item name="actionMenuTextColor">@color/zapplon_red</item>
+    </style>
+
+    <style name="ToolbarBaseTheme" parent="Theme.AppCompat">
+        <item name="android:background">@color/color_blue</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:height">@dimen/action_bar_height</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="actionMenuTextColor">@color/white</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+        <item name="thickness">@dimen/thickness</item>
+
+        <item name="gapBetweenBars">@dimen/gapBetweenBars</item>
+
+        <item name="drawableSize">@dimen/drawableSize</item>
+    </style>
+    
+    <style name="StoreTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimaryDark">@color/zapplon_primary_dark</item>
+    </style>
+    
+    <style name="ToolbarBaseTransparentTheme" parent="Theme.AppCompat">
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:background">@color/zapplon_red</item>
+        <item name="colorPrimaryDark">@color/zapplon_primary_dark</item>
+        <item name="colorAccent">@color/zapplon_red_trans_fifty</item>
+    </style>
+
+    <style name="ZDialogTheme" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/black_trans_seventy</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+</resources>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zhl_dark"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/progress_container"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:id="@+id/abcd">
+
+            <ListView
+                android:id="@+id/cabs_list"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#00000000"
+                android:paddingRight="@dimen/size10"
+                android:paddingBottom="@dimen/size25"
+                android:paddingLeft="@dimen/size10"
+                android:layout_marginLeft="@dimen/size10"
+                android:layout_marginRight="@dimen/size10"
+                android:clipToPadding="false"
+                android:requiresFadingEdge="vertical"
+                android:fadingEdgeLength="@dimen/size30"
+                android:scrollbars="none" />
+
+            <View
+                android:id="@+id/overlay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:clickable="true"
+                android:background="@color/black_trans_twenty"
+                />
+
+
+            <LinearLayout
+                android:id="@+id/arrow_sec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/arrow_container"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/round_cornor_filter"
+                        android:padding="@dimen/size10"
+                        android:gravity="center_vertical"
+                        android:visibility="gone"
+                        android:clickable="true"
+                        android:orientation="horizontal">
+                        <com.application.zapplon.utils.IconView
+                            android:id="@+id/arrow"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:text="@string/z_right_arrow"
+                            android:layout_marginTop="-7dp"
+                            android:textSize="@dimen/drawer_iconview_size"
+                            android:textColor="@color/icon_color"
+                            android:visibility="visible"/>
+                        <com.application.zapplon.utils.IconView
+                            android:id="@+id/arrow_close"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/z_cross"
+                            android:textSize="@dimen/drawer_iconview_size"
+                            android:textColor="@color/icon_color"
+                            android:visibility="gone"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/empty_view"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <com.application.zapplon.utils.IconView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="k"
+            android:textColor="@color/dark_grey"
+            android:textSize="@dimen/height150"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/empty_view_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/no_internet_message"
+            android:textColor="@color/dark_grey" />
+
+        <LinearLayout
+            android:id="@+id/empty_view_retry_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:gravity="center" >
+
+            <com.application.zapplon.utils.IconView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/z_retry"
+                android:textColor="@color/z_grey_font_color"
+                android:textSize="@dimen/drawer_iconview_size_big" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

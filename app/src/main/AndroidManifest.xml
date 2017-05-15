@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.application.zapplon">
+
+    <supports-screens android:smallScreens="false" />
+
+    <permission
+        android:name="com.application.zapplon.permission.C2D_MESSAGE"
+        android:protectionLevel="signature" />
+    <!-- Google Maps -->
+    <permission
+        android:name="com.application.zapplon.android.locationapi.maps.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <!-- For fetching current location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.application.zapplon.permission.C2D_MESSAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- For SpeechRecognizer -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- SMS Parsing -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="com.application.zapplon.android.locationapi.maps.permission.MAPS_RECEIVE" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:name=".ZApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+
+        <!-- Library usage -->
+        <uses-library android:name="com.google.android.maps" />
+
+        <!-- Meta-data of the application -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/app_id" />
+        <meta-data
+            android:name="com.crashlytics.ApiKey"
+            android:value="4b23245b109600af9dadc95aee6deaf9c84956eb" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCPCQOBTl-PhTzvn7FP34rLqf_stNHDUjk" />
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="e25132fa4399013502b10ac31e78ed29cb7e2b9a" />
+
+        <!-- Activities -->
+
+        <!-- Splash screen -->
+        <activity
+            android:name=".views.SplashScreen"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonSplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Home screen -->
+        <activity
+            android:name=".views.Home"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonHomeBaseTheme"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.google.com"
+                    android:pathPrefix="/maps/"
+                    android:scheme="https" />
+                <data
+                    android:host="maps.google.com"
+                    android:scheme="https" />
+                <data
+                    android:host="maps.google.com"
+                    android:pathPattern="/.*"
+                    android:pathPrefix="/?q=" />
+                <data android:scheme="geo" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.UserSetting"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonSplashTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".views.FeedbackPage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.ConnectedAccounts"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.Redeem"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.AboutUs"
+            android:label="@string/app_name"
+            android:parentActivityName=".views.Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonHomeBaseTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.zapplon.views.Home" />
+        </activity>
+        <activity
+            android:name=".views.Settings"
+            android:label="@string/app_name"
+            android:parentActivityName=".views.Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.zapplon.views.Home" />
+        </activity>
+        <activity
+            android:name=".views.CabBookingsPage"
+            android:label="@string/app_name"
+            android:parentActivityName=".views.Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme"
+            android:windowSoftInputMode="adjustResize|stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.zapplon.views.Home" />
+        </activity>
+        <activity
+            android:name=".utils.ZWebView"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:parentActivityName=".views.Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.zapplon.views.Home" />
+        </activity>
+        <activity
+            android:name=".utils.ZCabWebView"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:parentActivityName=".views.Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.zapplon.views.Home" />
+        </activity>
+        <activity
+            android:name=".views.UserPageActivity"
+            android:label="@string/app_name"
+            android:parentActivityName=".views.Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonThemeNoTitleBar"
+            android:windowSoftInputMode="stateHidden">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.zapplon.views.Home" />
+        </activity>
+        <activity
+            android:name=".views.MyBookings"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonHomeBaseTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.TrackingPage"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".views.CheckPhoneVerificationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZDialogTheme" />
+        <activity
+            android:name=".views.AppConfigActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZDialogTheme" />
+        <activity
+            android:name=".views.UrlRouter"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.zapplon.com"
+                    android:scheme="http" />
+                <data
+                    android:host="www.zapplon.com"
+                    android:pathPrefix="/home/"
+                    android:scheme="http" />
+                <data
+                    android:host="www.zapplon.com"
+                    android:pathPrefix="/store/"
+                    android:scheme="http" />
+                <data
+                    android:host="www.zapplon.com"
+                    android:pathPrefix="/appInvite/"
+                    android:scheme="http" />
+                <data
+                    android:host="www.zapplon.com"
+                    android:pathPrefix="/book"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="image/*" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.SelectCity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme" />
+        <activity
+            android:name=".views.ReferActivity"
+            android:label="@string/title_activity_refer"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme" />
+        <activity
+            android:name=".views.AddHomeLocation"
+            android:label="@string/title_activity_refer"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme" />
+        <activity
+            android:name=".views.PasswordResetActivity"
+            android:label="@string/title_activity_password_reset"
+            android:theme="@style/ZDialogTheme" />
+        <activity
+            android:name=".views.SpeechDialog"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZDialogTheme" />
+        <activity
+            android:name=".views.OfflineDialog"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonHomeBaseTheme" />
+        <activity
+            android:name=".views.CheckNetworkDialog"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZDialogTheme" />
+        <activity
+            android:name=".views.IntercityBookingActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme" />
+        <activity
+            android:name=".views.Selfdrive"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme" />
+        <activity
+            android:name=".views.IntercityActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonHomeBaseTheme"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".utils.ZPaymentWebView"
+            android:hardwareAccelerated="true"
+            android:label="@string/app_name"
+            android:parentActivityName=".views.Home"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZapplonActionBarTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.application.zapplon.views.Home" />
+        </activity>
+
+
+        <!-- Facebook Activity -->
+        <activity
+            android:name="com.facebook.LoginActivity"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- Broadcast Receivers -->
+        <receiver
+            android:name=".receivers.GcmBroadcastReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+
+                <category android:name="com.application.zapplon.receivers" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.IncomingSmsReceiver">
+            <intent-filter android:priority="999">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Receiver for Widget -->
+
+        <receiver android:name=".utils.VoiceControlWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info" />
+        </receiver>
+        <receiver
+            android:name=".receivers.InstallReferrerReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.TrackingReceiver" />
+        <receiver
+            android:name=".receivers.NetworkChangeReceiver"
+            android:label="NetworkChangeReceiver">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.net.wifi.WIFI_STATE_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- Services -->
+        <service android:name=".services.GcmIntentService" />
+        <service android:name=".services.CacheCleanerService" />
+        <service android:name=".services.ZHackService" />
+        <service android:name=".services.TrackingService" />
+        <service android:name=".services.AddressService" />
+        <service android:name=".services.AppConfigService" />
+
+    </application>
+
+</manifest>

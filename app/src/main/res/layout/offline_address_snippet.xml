@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/address_snippet_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="horizontal"
+    android:padding="@dimen/size10"
+    android:background="@drawable/whitebuttoncustomback">
+
+    <RadioButton
+        android:id="@+id/check"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:checked="false"/>
+
+    <com.application.zapplon.utils.IconView
+        android:id="@+id/icon_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/icon_color"
+        android:layout_margin="@dimen/size10"
+        android:textSize="@dimen/drawer_iconview_size"/>
+
+    <com.application.zapplon.utils.TextViewThin
+        android:id="@+id/currentLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="@dimen/size14"/>
+
+</LinearLayout>

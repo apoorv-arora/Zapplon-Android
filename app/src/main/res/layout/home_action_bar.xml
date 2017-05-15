@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/action_bar_height">
+
+    <com.application.zapplon.utils.IconView
+        android:id="@+id/drawer_left_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/z_drawer"
+        android:clickable="true"
+        android:textSize="@dimen/drawer_iconview_size"
+        android:textColor="@color/white"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="@dimen/size20"
+        android:paddingBottom="@dimen/size10"
+        android:paddingRight="@dimen/size10"
+        android:paddingTop="1dp"
+        android:transitionName="animation"/>
+
+
+    <LinearLayout
+        android:id="@+id/side_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:clickable="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/bar_zapps_container"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="center"
+            android:background="@drawable/photo_feedback"
+            android:padding="@dimen/size5"
+            android:orientation="vertical">
+
+            <com.application.zapplon.utils.TextViewThin
+                android:id="@+id/zapp_count2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/secondary_text_color"
+                android:gravity="bottom|center_horizontal"
+                android:text="0"
+                android:textSize="@dimen/size16" />
+
+            <com.application.zapplon.utils.TextViewLight
+                android:id="@+id/zapp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/active_color"
+                android:text="@string/zapps"
+                android:textSize="@dimen/size12"
+                android:letterSpacing="0.1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/sort_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:background="@drawable/photo_feedback"
+            android:orientation="horizontal">
+
+            <com.application.zapplon.utils.TextViewThin
+                android:id="@+id/sort"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/action_bar_height"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:padding="@dimen/size7"
+                android:visibility="visible"
+                android:textColor="@color/secondary_text_color"
+                android:paddingTop="@dimen/size5"
+                android:paddingRight="@dimen/size10"
+                android:textAllCaps="true"
+                android:text="@string/sort_by"
+                android:textSize="@dimen/z_font_small"/>
+
+            <com.application.zapplon.utils.TextViewThin
+                android:id="@+id/sorting_type"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/action_bar_height"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:padding="@dimen/size7"
+                android:visibility="visible"
+                android:textColor="@color/white"
+                android:paddingTop="@dimen/size5"
+                android:paddingRight="@dimen/size10"
+                android:textAllCaps="true"
+                android:text="time"
+                android:textSize="@dimen/z_font_small"
+                />
+
+            <com.application.zapplon.utils.IconView
+                android:id="@+id/right_down_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/action_bar_height"
+                android:text="@string/z_down_arrow"
+                android:textSize="@dimen/drawer_iconview_size"
+                android:textColor="@color/white"
+                android:layout_marginTop="1dp"
+                android:paddingRight="@dimen/size10" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.application.zapplon.utils.TextViewLight
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/action_bar_height"
+        android:ellipsize="end"
+        android:layout_toRightOf="@id/drawer_left_icon"
+        android:maxLines="1"
+        android:layout_marginLeft="@dimen/size10"
+        android:textColor="@color/secondary_text_color"
+        android:textAllCaps="true"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/size12"/>
+
+</RelativeLayout>

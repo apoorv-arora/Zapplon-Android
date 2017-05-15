@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="ZapplonActionBarHomeTheme" parent="@style/ZapplonHomeBaseTheme">
+        <item name="android:colorPrimary">@color/color_blue</item>
+        <item name="android:colorPrimaryDark">@color/color_blue</item>
+        <item name="android:colorAccent">@color/color_blue</item>
+
+        <!-- enable window content transitions -->
+        <item name="android:windowContentTransitions">true</item>
+
+        <!-- specify shared element transitions -->
+        <item name="android:windowSharedElementEnterTransition">    @transition/change_image_transform</item>
+        <item name="android:windowSharedElementExitTransition">    @transition/change_image_transform</item>
+    </style>
+
+</resources>

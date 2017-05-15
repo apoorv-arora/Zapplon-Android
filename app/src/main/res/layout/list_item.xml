@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.application.zapplon.utils.IconView
+        android:id="@+id/address_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/size10"
+        android:text="@string/z_location"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="@dimen/size12" />
+
+    <com.application.zapplon.utils.TextViewThin
+        android:id="@+id/address_tab"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/size10"
+        android:layout_toRightOf="@+id/address_icon"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="@dimen/size12" />
+</RelativeLayout>

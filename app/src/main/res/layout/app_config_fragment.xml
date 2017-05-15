@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="@dimen/size20"
+    android:orientation="vertical">
+
+    <com.application.zapplon.utils.TextViewBold
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/size20"
+        android:textColor="@color/zdark" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="@dimen/height60"
+            android:layout_height="@dimen/height60"
+            android:layout_gravity="center"
+            android:scaleType="fitXY"/>
+
+    </LinearLayout>
+
+    <com.application.zapplon.utils.TextViewLight
+        android:id="@+id/description"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/size16"
+        android:textColor="@color/zhl_darkest" />
+
+    <com.application.zapplon.utils.TextViewBold
+        android:id="@+id/bottom_footer_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/size12"
+        android:textColor="@color/zhl_dark" />
+
+    <com.application.zapplon.utils.TextViewBold
+        android:id="@+id/proceed_button_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="@dimen/size15"
+        android:padding="@dimen/size10"
+        android:background="@drawable/round_corner_green_button"
+        android:visibility="gone"
+        android:textStyle="bold" />
+
+
+</LinearLayout>

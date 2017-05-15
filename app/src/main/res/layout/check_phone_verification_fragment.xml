@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zhl"
+    android:padding="@dimen/size20"
+    android:clickable="true">
+
+    <com.application.zapplon.utils.TextViewThin
+        android:id="@+id/verify_phone_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/size20"
+        android:layout_marginTop="@dimen/size20"
+        android:layout_marginBottom="@dimen/size20"
+        android:textColor="@color/zdark" />
+
+    <com.application.zapplon.utils.EditTextLight
+        android:id="@+id/verification_code"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/verify_phone_text"
+        android:background="@drawable/round_corner_borders_zhl"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textColor="@color/zdark"
+        android:layout_marginTop="@dimen/size20"
+        android:layout_marginBottom="@dimen/size20"
+        android:textSize="@dimen/size18" />
+
+    <com.application.zapplon.utils.TextViewThin
+        android:id="@+id/resend_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/verification_code"
+        android:background="@drawable/round_corner_borders_zdark"
+        android:gravity="center"
+        android:text="@string/resend_code"
+        android:textColor="@color/zdark" />
+
+    <com.application.zapplon.utils.TextViewThin
+        android:id="@+id/edit_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/verification_code"
+        android:background="@drawable/round_corner_borders_zdark"
+        android:gravity="center"
+        android:text="@string/edit_number"
+        android:textColor="@color/zdark" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:alpha="0.5"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleInverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
